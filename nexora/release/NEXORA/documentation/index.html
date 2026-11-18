@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEXORA — Documentation</title>
+<meta name="description" content="Documentation for NEXORA, a premium futuristic e-commerce HTML template by TemplateFlux.">
+<style>
+  :root { --bg:#090B12; --surface:#171A27; --surface2:#1D2132; --line:rgba(255,255,255,.09); --text:#F4F4F7; --muted:#A1A7BB; --violet:#A855F7; --cyan:#00E5FF; --ok:#34D399; --warn:#FBBF24; --danger:#FB7185; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.7 system-ui, -apple-system, "Segoe UI", Roboto, Inter, sans-serif; }
+  a { color: var(--cyan); text-underline-offset: 3px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 4px; }
+  .layout { display: grid; grid-template-columns: 280px minmax(0, 1fr); min-height: 100vh; }
+  aside { position: sticky; top: 0; height: 100vh; overflow-y: auto; padding: 28px 22px; border-right: 1px solid var(--line); background: #0C0E17; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: .14em; font-size: 18px; margin-bottom: 4px; }
+  .brand i { width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center; font-style: normal; background: linear-gradient(135deg, var(--violet), var(--cyan)); color: #090B12; font-size: 15px; letter-spacing: 0; }
+  .ver { color: var(--muted); font-size: 13px; margin: 0 0 22px; }
+  aside nav a { display: block; color: var(--muted); text-decoration: none; padding: 6px 10px; border-radius: 8px; font-size: 14px; }
+  aside nav a:hover { color: var(--text); background: rgba(255,255,255,.05); }
+  aside nav .grp { font: 600 11px/1 ui-monospace, Menlo, monospace; letter-spacing: .14em; text-transform: uppercase; color: #6E7590; margin: 18px 10px 6px; }
+  main { padding: 48px clamp(20px, 5vw, 72px) 96px; max-width: 1060px; }
+  h1 { font-size: clamp(2rem, 1.4rem + 2.4vw, 3.2rem); line-height: 1.1; margin: 0 0 12px; letter-spacing: -.02em; }
+  h1 span { background: linear-gradient(100deg, #D8B4FE, var(--violet) 40%, var(--cyan)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  h2 { font-size: 1.6rem; margin: 64px 0 14px; padding-top: 8px; letter-spacing: -.01em; border-top: 1px solid var(--line); padding-top: 40px; }
+  h3 { font-size: 1.12rem; margin: 30px 0 8px; }
+  p, li { color: #D3D6E0; }
+  .lead { font-size: 1.12rem; color: var(--muted); max-width: 720px; }
+  code { font: 13.5px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: rgba(168,85,247,.12); color: #E9D5FF; padding: 2px 6px; border-radius: 5px; }
+  pre { background: #0F1220; border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; overflow-x: auto; }
+  pre code { background: none; padding: 0; color: #DDE3F0; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0 6px; font-size: 14.5px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase; }
+  .table-wrap { overflow-x: auto; }
+  .note { border: 1px solid var(--line); border-left: 3px solid var(--cyan); background: rgba(0,229,255,.05); border-radius: 10px; padding: 14px 18px; margin: 18px 0; }
+  .note.warn { border-left-color: var(--warn); background: rgba(251,191,36,.06); }
+  .note.req { border-left-color: var(--violet); background: rgba(168,85,247,.07); }
+  .note p { margin: 0; }
+  .note p + p { margin-top: 8px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 12px; margin: 18px 0; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; }
+  .card strong { display: block; margin-bottom: 4px; }
+  .card span { color: var(--muted); font-size: 14px; }
+  .swatch { display: inline-block; width: 14px; height: 14px; border-radius: 4px; vertical-align: -2px; margin-right: 6px; border: 1px solid rgba(255,255,255,.2); }
+  .tag { display: inline-block; font: 600 11px/1 ui-monospace, monospace; padding: 4px 7px; border-radius: 999px; letter-spacing: .06em; }
+  .tag.r { background: rgba(168,85,247,.18); color: #E9D5FF; }
+  .tag.o { background: rgba(0,229,255,.12); color: #A5F3FC; }
+  kbd { font: 12px ui-monospace, monospace; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 5px; padding: 1px 6px; background: var(--surface); }
+  .menu-btn { display: none; }
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; }
+    aside { position: static; height: auto; border-right: 0; border-bottom: 1px solid var(--line); }
+    aside nav { display: none; }
+    aside.open nav { display: block; }
+    .menu-btn { display: inline-block; margin-top: 4px; background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: 8px; padding: 8px 14px; font: inherit; font-size: 14px; cursor: pointer; }
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+<aside id="side">
+  <div class="brand"><i>N</i>NEXORA</div>
+  <p class="ver">Documentation · v1.0.0 · by TemplateFlux</p>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="toc" onclick="var s=document.getElementById('side');s.classList.toggle('open');this.setAttribute('aria-expanded',s.classList.contains('open'))">Contents</button>
+  <nav id="toc" aria-label="Documentation contents">
+    <p class="grp">Start</p>
+    <a href="#intro">Introduction</a>
+    <a href="#package">Package contents</a>
+    <a href="#structure">File structure</a>
+    <a href="#install">Installation</a>
+    <a href="#pages">Pages</a>
+    <p class="grp">Customise</p>
+    <a href="#tokens">Colours &amp; design tokens</a>
+    <a href="#typography">Typography &amp; fonts</a>
+    <a href="#logo">Logo, favicon &amp; brand</a>
+    <a href="#shared">Header, navigation &amp; footer</a>
+    <a href="#images">Images</a>
+    <a href="#icons">Icons</a>
+    <a href="#products">Products &amp; store data</a>
+    <a href="#lists">Product lists &amp; sections</a>
+    <p class="grp">Commerce</p>
+    <a href="#cart">Cart, wishlist &amp; coupons</a>
+    <a href="#checkout">Checkout (demo only)</a>
+    <a href="#forms">Forms &amp; validation</a>
+    <a href="#integrate">Connecting a backend</a>
+    <p class="grp">Reference</p>
+    <a href="#js">JavaScript architecture</a>
+    <a href="#motion">Animations &amp; reduced motion</a>
+    <a href="#a11y">Accessibility</a>
+    <a href="#browsers">Browser support &amp; performance</a>
+    <a href="#credits">Credits &amp; licences</a>
+    <a href="#changelog">Changelog</a>
+    <a href="#troubleshooting">Troubleshooting</a>
+    <a href="#support">Support</a>
+  </nav>
+</aside>
+
+<main>
+  <h1>NEXORA <span>Documentation</span></h1>
+  <p class="lead">Thank you for choosing NEXORA, a premium, futuristic multi-page e-commerce HTML template for audio, wearables, gaming and lifestyle-tech stores. It's built with semantic HTML5, modern CSS3 and dependency-free vanilla JavaScript.</p>
+
+  <div class="cards">
+    <div class="card"><strong>13 HTML pages</strong><span>Home, shop, product, categories, wishlist, cart, checkout, about, contact, FAQ, blog, article, 404</span></div>
+    <div class="card"><strong>Zero dependencies</strong><span>No frameworks, no jQuery, no build step required</span></div>
+    <div class="card"><strong>Working storefront UI</strong><span>Cart, wishlist, coupons, filters, quick view, validation, all persisted in localStorage</span></div>
+    <div class="card"><strong>Accessible &amp; responsive</strong><span>Tested from 320 px to 1920 px; keyboard and screen-reader friendly</span></div>
+  </div>
+
+  <!-- ============================================================ -->
+  <h2 id="intro">Introduction</h2>
+  <p>NEXORA is a <strong>static front-end template</strong>. Every page is a plain <code>.html</code> file that you can open, edit and upload to any web host. All interactive store features run in the browser:</p>
+  <ul>
+    <li>Product search, category, price and rating filters, sorting, grid/list view and "load more"</li>
+    <li>Quick-view modal, product gallery with zoom, colour and size variations</li>
+    <li>Cart drawer and cart page: add, change quantity, remove, live totals, free-shipping progress</li>
+    <li>Wishlist, coupon codes, a checkout interface with full validation, and order-success state</li>
+    <li>Mega menu, search overlay, mobile navigation, toasts, skeleton loaders and empty states</li>
+  </ul>
+  <div class="note warn">
+    <p><strong>Important: checkout and payment are demonstrations.</strong> NEXORA has no server, database or payment gateway. No order is created, no card is charged and no data leaves the browser. To sell real products you must connect the template to an e-commerce backend or payment provider. See <a href="#integrate">Connecting a backend</a>.</p>
+  </div>
+
+  <!-- ============================================================ -->
+  <h2 id="package">Package contents</h2>
+  <p>The downloaded ZIP contains:</p>
+  <pre><code>NEXORA/
+├── template/          ← the website (upload the contents of this folder)
+├── documentation/     ← this documentation (index.html)
+├── CREDITS.txt        ← fonts, icons and licence summary
+└── README.txt         ← quick start</code></pre>
+  <div class="note req">
+    <p><strong>Demo images are not included.</strong> The product, hero, blog and about photography in the live preview was generated for presentation only. It is <em>not</em> part of the download. The package contains branded placeholder images with the <strong>same file names and pixel sizes</strong>, so everything works immediately and you can drop in your own photos. See <a href="#images">Images</a>.</p>
+  </div>
+
+  <!-- ============================================================ -->
+  <h2 id="structure">File structure</h2>
+  <pre><code>template/
+├── index.html              Home
+├── shop.html               Shop / product listing (supports ?cat= &amp; ?q= &amp; ?sort=)
+├── product.html            Product details (product chosen with ?id=slug)
+├── categories.html         Category overview
+├── wishlist.html           Wishlist
+├── cart.html               Cart
+├── checkout.html           Checkout (demo)
+├── about.html              About
+├── contact.html            Contact
+├── faq.html                FAQ (anchors: #orders #shipping #returns #product #privacy)
+├── blog.html               Blog / journal listing
+├── blog-details.html       Blog article
+├── 404.html                Error page
+└── assets/
+    ├── css/
+    │   └── style.css       Complete design system (29 numbered sections)
+    ├── js/
+    │   ├── data.js         Catalogue: products, categories, colours, coupons, settings
+    │   ├── core.js         Helpers, storage, store (cart/wishlist/coupon), layers, toasts
+    │   ├── components.js   Shared UI: header, search, drawer, quick view, cards, forms…
+    │   ├── pages.js        One controller per page (home, shop, product, cart…)
+    │   └── main.js         Bootstrap: runs shared components + the page controller
+    ├── fonts/              Self-hosted WOFF2 fonts + OFL licences
+    ├── icons/              Lucide ISC licence (icons are inlined in each page)
+    └── images/
+        ├── brand/          logo.svg, favicon.svg (original vector work)
+        ├── hero/           hero-main.webp (1312×816), hero-mobile.webp (900×736)
+        ├── products/       &lt;slug&gt;.webp + &lt;slug&gt;-detail.webp (800×800)
+        ├── blog/           6 × 1200×750
+        └── about/          lineup.webp (1800×900), studio.webp (1000×800)</code></pre>
+
+  <!-- ============================================================ -->
+  <h2 id="install">Installation</h2>
+  <h3>1. Preview locally</h3>
+  <p>You can double-click <code>template/index.html</code> to open it. For the most accurate results (some browsers restrict <code>localStorage</code> on <code>file://</code> URLs), run a tiny local server from the <code>template</code> folder:</p>
+  <pre><code># Python 3
+python3 -m http.server 8080
+# or Node.js
+npx serve .</code></pre>
+  <p>Then visit <code>http://localhost:8080</code>. Editors such as VS Code ("Live Server" extension) work too.</p>
+  <h3>2. Upload to your host</h3>
+  <p>Upload the <strong>contents</strong> of <code>template/</code> (not the folder itself) to your web root (<code>public_html</code>, <code>www</code>, etc.) via FTP, your hosting file manager, or a static host such as Netlify, Vercel, Cloudflare Pages or GitHub Pages. No build step, database or server language is required.</p>
+  <h3>3. Configure the 404 page</h3>
+  <p>Most static hosts automatically use <code>404.html</code>. On Apache, add this to <code>.htaccess</code>:</p>
+  <pre><code>ErrorDocument 404 /404.html</code></pre>
+  <h3>Cache-busting</h3>
+  <p>CSS and JS links end in <code>?v=1.0.0</code>. When you deploy changes, find and replace that string in all HTML files (for example with <code>?v=1.0.1</code>) so visitors get the new files.</p>
+
+  <!-- ============================================================ -->
+  <h2 id="pages">Pages</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>File</th><th>Purpose &amp; key features</th></tr></thead>
+    <tbody>
+      <tr><td><code>index.html</code></td><td>Announcement bar, layered editorial hero (separate desktop/mobile compositions), marquee, category bento, trending tabs, campaign banners with countdown, new-arrivals carousel, best-seller spotlight, advantages, testimonials, newsletter</td></tr>
+      <tr><td><code>shop.html</code></td><td>Search, category checkboxes, dual price slider, rating filter, availability, active-filter chips, sorting, grid/list toggle, load more, off-canvas filters on mobile. URL parameters: <code>?cat=audio</code>, <code>?q=ring</code>, <code>?sort=newest</code></td></tr>
+      <tr><td><code>product.html</code></td><td>Rendered from <code>data.js</code> by <code>?id=</code>. Gallery with thumbnails, zoom and keyboard arrows, colour/size variants, quantity, add to cart, buy now, wishlist, tabs (description, specs, reviews, shipping), related products</td></tr>
+      <tr><td><code>categories.html</code></td><td>Editorial category rows with product counts and starting prices, plus "shop by mood" collections</td></tr>
+      <tr><td><code>wishlist.html</code></td><td>Saved items, add all to cart, share list (copies a link), clear, empty state</td></tr>
+      <tr><td><code>cart.html</code></td><td>Line items, quantity controls, remove, coupon, free-shipping progress, order summary, recommendations, empty state</td></tr>
+      <tr><td><code>checkout.html</code></td><td>Contact, shipping address, delivery method, payment (demo), terms, validation with inline errors, live summary, success modal</td></tr>
+      <tr><td><code>about.html</code></td><td>Statement intro, stats, values, timeline, team, CTA band</td></tr>
+      <tr><td><code>contact.html</code></td><td>Contact cards, validated form, stylised map (pure CSS/SVG, no third-party embed)</td></tr>
+      <tr><td><code>faq.html</code></td><td>Live search, topic filters, accessible accordions, deep-linkable anchors</td></tr>
+      <tr><td><code>blog.html</code> / <code>blog-details.html</code></td><td>Featured story, category filter, article with table of contents, share and copy-link, product callout, author box, local comments with validation</td></tr>
+      <tr><td><code>404.html</code></td><td>Error page with product search and quick links</td></tr>
+    </tbody>
+  </table></div>
+
+  <!-- ============================================================ -->
+  <h2 id="tokens">Colours &amp; design tokens</h2>
+  <p>Every colour, radius, shadow, spacing step and timing is a CSS custom property in <strong>section 02 · DESIGN TOKENS</strong> of <code>assets/css/style.css</code>. Change a token once and the whole template updates.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Token</th><th>Default</th><th>Used for</th></tr></thead>
+    <tbody>
+      <tr><td><code>--c-bg</code></td><td><span class="swatch" style="background:#090B12"></span>#090B12</td><td>Page background (midnight)</td></tr>
+      <tr><td><code>--c-surface</code></td><td><span class="swatch" style="background:#171A27"></span>#171A27</td><td>Cards, panels, inputs</td></tr>
+      <tr><td><code>--c-violet</code></td><td><span class="swatch" style="background:#A855F7"></span>#A855F7</td><td>Primary accent (electric violet)</td></tr>
+      <tr><td><code>--c-cyan</code></td><td><span class="swatch" style="background:#00E5FF"></span>#00E5FF</td><td>Secondary accent (neon cyan), focus rings</td></tr>
+      <tr><td><code>--c-text</code></td><td><span class="swatch" style="background:#F4F4F7"></span>#F4F4F7</td><td>Primary text</td></tr>
+      <tr><td><code>--c-muted</code> / <code>--c-dim</code></td><td><span class="swatch" style="background:#A1A7BB"></span>#A1A7BB / #7A8197</td><td>Secondary and tertiary text</td></tr>
+      <tr><td><code>--grad-brand</code>, <code>--grad-text</code></td><td>violet → cyan</td><td>Primary buttons, gradient headline words</td></tr>
+      <tr><td><code>--fs-xs</code> … <code>--fs-hero</code></td><td>fluid <code>clamp()</code></td><td>Type scale</td></tr>
+      <tr><td><code>--s-1</code> … <code>--s-10</code>, <code>--section-y</code>, <code>--gutter</code></td><td>4 px → 128 px</td><td>Spacing system</td></tr>
+      <tr><td><code>--r-xs</code> … <code>--r-pill</code></td><td>6 px → 999 px</td><td>Radii</td></tr>
+      <tr><td><code>--shadow-*</code>, <code>--glow-*</code></td><td></td><td>Elevation and subtle accent glows</td></tr>
+      <tr><td><code>--ease</code>, <code>--t-fast/med/slow</code></td><td></td><td>Motion timing</td></tr>
+      <tr><td><code>--container</code></td><td>1320 px (1400 px ≥ 1536 px)</td><td>Max content width</td></tr>
+    </tbody>
+  </table></div>
+  <h3>Breakpoints</h3>
+  <p>Desktop-first, defined in section 29 · RESPONSIVE: <code>≥1536</code> wide · <code>≤1279</code> laptop · <code>≤1023</code> tablet (mobile navigation appears) · <code>≤767</code> large phone · <code>≤479</code> phone · <code>≤359</code> small phone. Touch devices (<code>hover: none</code>) get always-visible add-to-cart buttons on product cards.</p>
+  <h3>Example: change the accent colour</h3>
+  <pre><code>:root {
+  --c-violet: #FF4D8D;   /* new primary accent */
+  --c-cyan:   #FFB547;   /* new secondary accent */
+}</code></pre>
+  <p>A few decorative glows use the accent as an <code>rgba()</code> value (search for <code>168, 85, 247</code> and <code>0, 229, 255</code>). Replace those for a complete re-skin.</p>
+
+  <!-- ============================================================ -->
+  <h2 id="typography">Typography &amp; fonts</h2>
+  <p>All fonts are <strong>self-hosted</strong> in <code>assets/fonts/</code> (WOFF2, Latin subset). No requests go to Google Fonts or any CDN.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Font</th><th>Role</th><th>Weights</th></tr></thead>
+    <tbody>
+      <tr><td>Syne</td><td>Display headings (<code>--ff-display</code>). Weight 800 is reserved for the hero title and very large numerals.</td><td>600, 700, 800</td></tr>
+      <tr><td>Inter</td><td>Body, UI, small headings, prices (<code>--ff-body</code>)</td><td>400, 500, 600, 700</td></tr>
+      <tr><td>JetBrains Mono</td><td>Eyebrows, labels, counters (<code>--ff-mono</code>)</td><td>400, 500</td></tr>
+    </tbody>
+  </table></div>
+  <p>To use another font, add WOFF2 files to <code>assets/fonts/</code>, update the <code>@font-face</code> rules in section 01, and change <code>--ff-display</code> / <code>--ff-body</code>. Also update the <code>&lt;link rel="preload"&gt;</code> in each page's <code>&lt;head&gt;</code>.</p>
+
+  <!-- ============================================================ -->
+  <h2 id="logo">Logo, favicon &amp; brand</h2>
+  <ul>
+    <li><strong>Logo:</strong> the header and footer logo is inline SVG plus text inside <code>&lt;a class="logo"&gt;</code>. Replace it with your own <code>&lt;img src="assets/images/brand/logo.svg" alt="Your brand"&gt;</code> or edit the text. A standalone <code>logo.svg</code> is included.</li>
+    <li><strong>Favicon:</strong> replace <code>assets/images/brand/favicon.svg</code>. Add a PNG fallback if you need one.</li>
+    <li><strong>Store name &amp; meta:</strong> each page has its own <code>&lt;title&gt;</code>, <code>&lt;meta name="description"&gt;</code> and Open Graph tags in the <code>&lt;head&gt;</code>.</li>
+    <li><strong>Theme colour:</strong> <code>&lt;meta name="theme-color" content="#090B12"&gt;</code> tints mobile browser chrome.</li>
+  </ul>
+
+  <!-- ============================================================ -->
+  <h2 id="shared">Header, navigation &amp; footer</h2>
+  <p>Because NEXORA is plain HTML, shared regions are repeated in every page. They are clearly delimited by comments:</p>
+  <pre><code>&lt;!-- ================= ANNOUNCEMENT BAR + HEADER (shared on every page) ================= --&gt;
+&lt;!-- ================= MOBILE NAVIGATION (shared) ================= --&gt;
+&lt;!-- ================= PAGE CONTENT ================= --&gt;
+&lt;!-- ================= FOOTER (shared) ================= --&gt;
+&lt;!-- ================= OVERLAYS: search, cart drawer, quick view, toasts (shared) ================= --&gt;</code></pre>
+  <p><strong>Tip:</strong> edit the region in one page, then use your editor's multi-file find &amp; replace (VS Code: <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>H</kbd>) to apply it to all 13 files. If you use a server language or static-site generator, move these regions into includes or partials.</p>
+  <h3>Active menu item</h3>
+  <p>The current page's link carries <code>aria-current="page"</code>, which also draws the active indicator. Update it when you copy a page.</p>
+  <h3>Mega menu</h3>
+  <p>The "Shop" item contains a mega menu (<code>.mega</code>) with category links, quick links and a featured panel. It opens on hover (pointer devices), on click, and with the keyboard (<kbd>Enter</kbd>/<kbd>Space</kbd>, <kbd>Esc</kbd> to close). The "Pages" item is a standard dropdown.</p>
+  <h3>Announcement bar</h3>
+  <p>Messages rotate every 4.5 s (static when reduced motion is preferred). The close button hides the bar permanently for that visitor (<code>localStorage: nexora.announce.closed</code>).</p>
+
+  <!-- ============================================================ -->
+  <h2 id="images">Images</h2>
+  <div class="note req"><p>The preview photography is <strong>not included</strong> in the download (see <a href="#credits">Credits</a>). Placeholders with identical names and dimensions ship instead. Replace them with your own licensed images, keeping the file names, or update the paths.</p></div>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Location</th><th>Size (px)</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td><code>images/products/&lt;slug&gt;.webp</code></td><td>800 × 800</td><td>Main product image (card, cart, search). Dark, centred product on a midnight background looks best.</td></tr>
+      <tr><td><code>images/products/&lt;slug&gt;-detail.webp</code></td><td>800 × 800</td><td>Second gallery image, also shown on card hover</td></tr>
+      <tr><td><code>images/hero/hero-main.webp</code></td><td>1312 × 816</td><td>Desktop hero visual. Edges are softly masked, so a dark background blends in.</td></tr>
+      <tr><td><code>images/hero/hero-mobile.webp</code></td><td>900 × 736</td><td>Mobile hero visual (served with <code>&lt;picture&gt;</code> below 768 px)</td></tr>
+      <tr><td><code>images/blog/*.webp</code></td><td>1200 × 750</td><td>Post covers (16:10)</td></tr>
+      <tr><td><code>images/about/lineup.webp</code></td><td>1800 × 900</td><td>About page hero image</td></tr>
+      <tr><td><code>images/about/studio.webp</code></td><td>1000 × 800</td><td>About timeline image</td></tr>
+    </tbody>
+  </table></div>
+  <p>WebP is recommended (about 30% smaller than JPEG). JPG and PNG also work if you change the extension in the HTML or <code>data.js</code>. Always keep <code>width</code>/<code>height</code> attributes to prevent layout shift.</p>
+  <h3>Colour variants &amp; images</h3>
+  <p>In <code>data.js</code>, each colour can define a CSS <code>filter</code> (for example <code>hue-rotate</code>). It tints the product photo when a shopper picks that colour, so one photo can represent several finishes. For real products, set <code>filter: 'none'</code> and use per-colour photos if you prefer.</p>
+
+  <!-- ============================================================ -->
+  <h2 id="icons">Icons</h2>
+  <p>NEXORA uses <a href="https://lucide.dev" rel="noopener">Lucide</a> icons (ISC licence) plus four custom social glyphs. To keep pages fast and dependency-free, the icons are included as an <strong>inline SVG sprite</strong> at the top of each page. Use any of them like this:</p>
+  <pre><code>&lt;svg class="icon" aria-hidden="true"&gt;&lt;use href="#i-heart"/&gt;&lt;/svg&gt;</code></pre>
+  <p>Included: search, shopping-bag, heart, user, menu, x, chevron-down/right/left, arrow-right/up-right/up/left, star, eye, plus, minus, trash-2, truck, shield-check, rotate-ccw, headphones, watch, gamepad-2, package, sparkles, zap, mail, phone, map-pin, clock, check, circle-check, circle-alert, info, sliders-horizontal, layout-grid, list, tag, credit-card, lock, gift, send, cpu, leaf, award, message-circle, calendar, share-2, copy, ticket, badge-percent, user-round, flame, circle-help, wallet, refresh-cw, globe, social-x, social-instagram, social-youtube, social-tiktok.</p>
+  <p><strong>Add an icon:</strong> copy its SVG from lucide.dev, wrap the inner paths in <code>&lt;symbol id="i-name" viewBox="0 0 24 24"&gt;…&lt;/symbol&gt;</code> and paste it inside the sprite in each page. Icon-only buttons always need an <code>aria-label</code>.</p>
+
+  <!-- ============================================================ -->
+  <h2 id="products">Products &amp; store data</h2>
+  <p>All catalogue content lives in <code>assets/js/data.js</code>. Product cards, the shop, product pages, search, the mega menu featured item, cart and checkout all read from this file.</p>
+  <h3>Store settings</h3>
+  <pre><code>var settings = {
+  currency: 'USD', locale: 'en-US',   // used by Intl.NumberFormat
+  freeShippingThreshold: 150,          // free standard shipping from this subtotal
+  standardShipping: 12, expressShipping: 24,
+  taxRate: 0.08,                       // 8 % estimated tax (demo)
+  maxQty: 10                           // per cart line
+};</code></pre>
+  <h3>Product fields</h3>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td><code>id</code></td><td>string</td><td>Unique slug, used in <code>product.html?id=…</code> <span class="tag r">required</span></td></tr>
+      <tr><td><code>name</code>, <code>category</code>, <code>price</code></td><td>string / string / number</td><td>Category must match a category <code>id</code> <span class="tag r">required</span></td></tr>
+      <tr><td><code>oldPrice</code></td><td>number</td><td>Shows a strike-through price and an automatic −% badge <span class="tag o">optional</span></td></tr>
+      <tr><td><code>rating</code>, <code>reviews</code>, <code>sold</code>, <code>stock</code></td><td>number</td><td>Stars, review count, best-seller sorting, low-stock label (≤ 8)</td></tr>
+      <tr><td><code>badges</code></td><td>array</td><td><code>'new'</code>, <code>'bestseller'</code>, <code>'sale'</code></td></tr>
+      <tr><td><code>tags</code></td><td>array</td><td>Extra search keywords</td></tr>
+      <tr><td><code>createdAt</code></td><td>YYYY-MM-DD</td><td>"Newest" sorting and New Arrivals</td></tr>
+      <tr><td><code>image</code>, <code>gallery</code></td><td>string / array</td><td>Main image and gallery images</td></tr>
+      <tr><td><code>colors</code>, <code>sizes</code></td><td>array</td><td>Colour keys from <code>colors</code> and size labels. These render as variant selectors.</td></tr>
+      <tr><td><code>short</code></td><td>string</td><td>One-line description (cards, product page)</td></tr>
+      <tr><td><code>specs</code></td><td>object</td><td>Key/value pairs for the Specifications tab</td></tr>
+    </tbody>
+  </table></div>
+  <h3>Add a product</h3>
+  <pre><code>p({ id: 'nova-mic', name: 'Nova Studio Mic', category: 'audio', price: 189, oldPrice: 219,
+    rating: 4.8, reviews: 120, stock: 30, sold: 640, badges: ['new'], tags: ['microphone', 'usb-c'],
+    createdAt: '2026-11-01', image: IMG + 'nova-mic.webp',
+    gallery: [IMG + 'nova-mic.webp', IMG + 'nova-mic-detail.webp'], colors: ['graphite'],
+    short: 'Broadcast-grade USB-C microphone with zero-latency monitoring.',
+    specs: { 'Capsule': '25 mm condenser', 'Connection': 'USB-C' } }),</code></pre>
+  <p>It now appears in the shop, search, filters, its category and the relevant homepage lists automatically.</p>
+  <h3>Categories, colours &amp; coupons</h3>
+  <p>Edit <code>categories</code> (id, name, icon, tagline, description, image), <code>colors</code> (name, hex, filter) and <code>coupons</code> in the same file. If you add a category, also add its links to the mega menu, footer and shop filter checkboxes.</p>
+
+  <!-- ============================================================ -->
+  <h2 id="lists">Product lists &amp; sections</h2>
+  <p>Any element with <code>data-products</code> is filled automatically with product cards:</p>
+  <pre><code>&lt;div class="product-grid" data-products="trending" data-limit="4"&gt;&lt;/div&gt;
+&lt;div class="product-grid" data-products="new" data-category="audio" data-limit="3"&gt;&lt;/div&gt;</code></pre>
+  <p>Values: <code>trending</code>, <code>new</code>, <code>bestsellers</code>, <code>sale</code>. Other handy attributes:</p>
+  <ul>
+    <li><code>data-reveal</code> (or <code>="fade"</code>, <code>="scale"</code>) animates an element in on scroll. Add <code>style="--rd:120"</code> for a 120 ms delay.</li>
+    <li><code>data-countdown="2026-12-31T23:59:59"</code> with children <code>[data-cd=d|h|m|s]</code> creates a countdown. Without a date it rolls to the end of the current week.</li>
+    <li><code>data-action="add|wish|quick" data-id="slug"</code> on any button adds to cart, toggles wishlist or opens quick view.</li>
+    <li><code>data-action="open-cart"</code> and <code>data-action="open-search"</code> open the drawer or the search overlay. <code>data-count="cart|wishlist"</code> shows live counters.</li>
+  </ul>
+
+  <!-- ============================================================ -->
+  <h2 id="cart">Cart, wishlist &amp; coupons</h2>
+  <p>State is saved in the visitor's browser with <code>localStorage</code> and stays in sync across pages and tabs.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Key</th><th>Contents</th></tr></thead>
+    <tbody>
+      <tr><td><code>nexora.cart.v1</code></td><td>Cart lines <code>{ key, id, qty, variant }</code></td></tr>
+      <tr><td><code>nexora.wishlist.v1</code></td><td>Array of product ids</td></tr>
+      <tr><td><code>nexora.coupon.v1</code></td><td>Applied coupon code</td></tr>
+      <tr><td><code>nexora.view</code></td><td>Shop grid/list preference</td></tr>
+      <tr><td><code>nexora.announce.closed</code></td><td>Announcement bar dismissed</td></tr>
+      <tr><td><code>nexora.comments.&lt;post&gt;</code></td><td>Demo blog comments</td></tr>
+    </tbody>
+  </table></div>
+  <h3>Totals</h3>
+  <p><code>subtotal − discount + shipping + tax = total</code>. Tax is calculated on <em>subtotal − discount</em>. Standard shipping is free when the discounted subtotal reaches <code>freeShippingThreshold</code>. Express is always charged.</p>
+  <h3>Demo coupon codes</h3>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Code</th><th>Effect</th></tr></thead>
+    <tbody>
+      <tr><td><code>NEXORA10</code></td><td>10% off the subtotal</td></tr>
+      <tr><td><code>FUTURE25</code></td><td>$25 off orders of $200 or more</td></tr>
+      <tr><td><code>FREESHIP</code></td><td>Free standard shipping</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note warn"><p>Coupons are validated in the browser for demonstration only. In production, always validate coupons and recalculate prices on your server.</p></div>
+  <h3>Events</h3>
+  <pre><code>document.addEventListener('nx:cart', function (e) { console.log(e.detail.cart); });
+document.addEventListener('nx:wishlist', function (e) { console.log(e.detail.wishlist); });</code></pre>
+
+  <!-- ============================================================ -->
+  <h2 id="checkout">Checkout (demo only)</h2>
+  <p><code>checkout.html</code> shows a complete, validated checkout <strong>interface</strong>: contact, address, delivery options, a card form with formatting (number groups, MM/YY expiry, CVC), terms consent and a live order summary. On a valid submit it shows a success modal and clears the cart.</p>
+  <div class="note warn"><p><strong>No payment is processed and no data is sent anywhere.</strong> A notice on the page tells shoppers that it is a demo. Remove that notice only once you have connected a real payment provider. Never collect real card numbers in your own HTML forms; use your provider's hosted fields or checkout (for example Stripe Elements or PayPal Checkout) to stay PCI-compliant.</p></div>
+  <p>Demo card for testing the flow: <code>4242 4242 4242 4242</code>, any future expiry, any 3-digit CVC.</p>
+
+  <!-- ============================================================ -->
+  <h2 id="forms">Forms &amp; validation</h2>
+  <p>Add <code>data-validate</code> to inputs inside a <code>.field</code> wrapper with a <code>.field__error</code> message. Rules can be combined, separated by spaces:</p>
+  <pre><code>&lt;div class="field"&gt;
+  &lt;label for="email"&gt;Email &lt;span class="req" aria-hidden="true"&gt;*&lt;/span&gt;&lt;/label&gt;
+  &lt;input class="input" id="email" type="email" data-validate="required email" aria-describedby="email-err" required&gt;
+  &lt;p class="field__error" id="email-err"&gt;Enter a valid email address.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+  <p>Available rules: <code>required</code>, <code>email</code>, <code>phone</code>, <code>zip</code>, <code>card</code> (Luhn check), <code>expiry</code> (future MM/YY), <code>cvc</code>, <code>min10</code> (10+ characters), <code>checked</code> (checkbox). Fields validate on blur and on submit. Errors are announced with <code>aria-invalid</code> and <code>aria-describedby</code>, and focus moves to the first invalid field. Add your own rules to <code>NX.validators</code> in <code>components.js</code>.</p>
+  <p>Newsletter forms use <code>&lt;form data-newsletter&gt;</code> followed by a sibling <code>&lt;p class="form-message"&gt;</code>.</p>
+
+  <!-- ============================================================ -->
+  <h2 id="integrate">Connecting a backend</h2>
+  <p>Search the JavaScript for <code>INTEGRATION POINT</code>. Each one marks where a simulated action should be replaced by a real request:</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Feature</th><th>File</th><th>Suggested services</th></tr></thead>
+    <tbody>
+      <tr><td>Checkout / payment</td><td><code>pages.js</code> (checkout controller)</td><td>Stripe Checkout, PayPal, Shopify Buy Button / Storefront API, Snipcart, Commerce Layer</td></tr>
+      <tr><td>Contact form</td><td><code>pages.js</code> (contact controller)</td><td>Formspree, Netlify Forms, Basin, your own endpoint</td></tr>
+      <tr><td>Newsletter</td><td><code>components.js</code> (newsletter)</td><td>Mailchimp, Brevo, ConvertKit (via your server)</td></tr>
+      <tr><td>Blog comments</td><td><code>pages.js</code> (post controller)</td><td>Your CMS, Disqus, Giscus</td></tr>
+      <tr><td>Catalogue</td><td><code>data.js</code></td><td>Replace the static arrays with a JSON file or API response that uses the same fields</td></tr>
+    </tbody>
+  </table></div>
+  <p>Example: send the contact form to Formspree:</p>
+  <pre><code>fetch('https://formspree.io/f/YOUR_ID', { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+  .then(function (r) { if (!r.ok) throw r; /* show success */ })
+  .catch(function () { /* show error */ });</code></pre>
+
+  <!-- ============================================================ -->
+  <h2 id="js">JavaScript architecture</h2>
+  <p>Vanilla ES5-compatible JavaScript in five files, loaded with <code>defer</code> in this order: <code>data.js → core.js → components.js → pages.js → main.js</code>. Everything is namespaced under <code>window.NX</code>, with no globals beyond <code>NX</code> and <code>NX_DATA</code>.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>File</th><th>Responsibilities</th></tr></thead>
+    <tbody>
+      <tr><td><code>core.js</code></td><td>DOM helpers (<code>NX.$</code>, <code>NX.on</code>), <code>NX.money</code>, safe storage, <code>NX.store</code> (cart, wishlist, coupon, totals), <code>NX.layer</code> (overlays with focus trap, scroll lock, Esc), <code>NX.toast</code></td></tr>
+      <tr><td><code>components.js</code></td><td>Header, mega menu, mobile nav, search, cart drawer, quick view, product cards, tabs, accordions, carousel, countdown, reveal-on-scroll, page transitions, form validation, newsletter</td></tr>
+      <tr><td><code>pages.js</code></td><td><code>NX.pages.home</code>, <code>shop</code>, <code>product</code>, <code>categories</code>, <code>wishlist</code>, <code>cart</code>, <code>checkout</code>, <code>contact</code>, <code>faq</code>, <code>blog</code>, <code>post</code></td></tr>
+      <tr><td><code>main.js</code></td><td>Runs <code>NX.initComponents()</code>, then the controller named in <code>&lt;body data-page="…"&gt;</code></td></tr>
+    </tbody>
+  </table></div>
+  <h3>Store API</h3>
+  <pre><code>NX.store.addToCart('aether-x1', 1, { color: 'Graphite' });
+NX.store.setQty(lineKey, 3);
+NX.store.removeFromCart(lineKey);
+NX.store.clearCart();
+NX.store.toggleWish('halo-ring');   NX.store.isWished('halo-ring');
+NX.store.applyCoupon('NEXORA10');   NX.store.removeCoupon();
+NX.store.totals('standard');        // { subtotal, discount, shipping, tax, total, … }
+NX.toast({ title: 'Saved', message: 'Your changes were saved.' });</code></pre>
+  <h3>Create a new page</h3>
+  <ol>
+    <li>Duplicate a simple page such as <code>about.html</code> and replace the content between the <code>PAGE CONTENT</code> comments.</li>
+    <li>Set a unique <code>&lt;title&gt;</code> and description, and set <code>&lt;body data-page="…"&gt;</code>. Use a name without a controller (for example <code>about</code>) for static pages.</li>
+    <li>Link the page from the navigation, the Pages menu and the footer as needed.</li>
+  </ol>
+
+  <!-- ============================================================ -->
+  <h2 id="motion">Animations &amp; reduced motion</h2>
+  <ul>
+    <li>Hero entrance choreography (<code>[data-hero]</code> with <code>--d</code> delays), scroll reveals via <code>IntersectionObserver</code>, page fade transitions between internal links, drawer/modal/menu transitions, button loading and success micro-interactions, and a marquee.</li>
+    <li>Only <code>transform</code> and <code>opacity</code> are animated, for smooth 60 fps performance.</li>
+    <li><strong>prefers-reduced-motion:</strong> when the visitor's OS requests reduced motion, transitions and animations are reduced to near-instant, reveals show immediately, the marquee and announcement rotation stop, and smooth scrolling is disabled.</li>
+    <li>Without JavaScript all content stays visible, because reveal styles only apply when <code>html.js</code> is present.</li>
+  </ul>
+
+  <!-- ============================================================ -->
+  <h2 id="a11y">Accessibility</h2>
+  <ul>
+    <li>Semantic landmarks (<code>header</code>, <code>nav</code>, <code>main</code>, <code>footer</code>), one <code>h1</code> per page, logical heading order, and a skip link.</li>
+    <li>Full keyboard support: menus, mega menu, tabs (arrow keys), accordions, gallery, carousel, modals and drawers with focus trap, <kbd>Esc</kbd> to close and focus return. Press <kbd>/</kbd> or <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>K</kbd> to open search.</li>
+    <li>ARIA where it adds meaning: <code>aria-expanded</code>, <code>aria-controls</code>, <code>aria-pressed</code>, <code>aria-selected</code>, <code>aria-current</code>, live regions for toasts, counts and results.</li>
+    <li>Every form field has a label; errors are linked with <code>aria-describedby</code>.</li>
+    <li>Visible <code>:focus-visible</code> rings and touch targets of 40–44 px or more on mobile.</li>
+    <li>Tested with axe-core (WCAG 2.1 A/AA rules plus best practices) at 390, 768 and 1440 px: 0 violations on all 13 pages, including colour contrast.</li>
+  </ul>
+  <p>Keep alternative text meaningful when you replace images, and use <code>alt=""</code> for purely decorative images.</p>
+
+  <!-- ============================================================ -->
+  <h2 id="browsers">Browser support &amp; performance</h2>
+  <p>Latest two versions of Chrome, Edge, Firefox and Safari (macOS and iOS), plus Samsung Internet. The template relies on CSS custom properties, Grid, <code>clamp()</code>, <code>backdrop-filter</code> (with a solid fallback), <code>IntersectionObserver</code> and the <code>inert</code> attribute.</p>
+  <ul>
+    <li>No external requests: fonts, icons and scripts are all local.</li>
+    <li>Total template weight with demo images is about 2 MB; CSS and JS together are about 230 KB uncompressed (about 52 KB gzipped).</li>
+    <li>WebP images with explicit dimensions, <code>loading="lazy"</code> below the fold, and font preloading.</li>
+    <li>Enable gzip or Brotli compression and long-term caching on your host for the best scores.</li>
+  </ul>
+
+  <!-- ============================================================ -->
+  <h2 id="credits">Credits &amp; licences</h2>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Asset</th><th>Author / source</th><th>Licence</th><th>In download?</th></tr></thead>
+    <tbody>
+      <tr><td>Syne (font)</td><td>Bonjour Monde, <a href="https://gitlab.com/bonjour-monde/fonderie/syne-typeface" rel="noopener">gitlab.com/bonjour-monde/fonderie/syne-typeface</a>. Files via Fontsource 5.3.0</td><td>SIL OFL 1.1</td><td>Yes, with licence file</td></tr>
+      <tr><td>Inter (font)</td><td>Rasmus Andersson, <a href="https://github.com/rsms/inter" rel="noopener">github.com/rsms/inter</a></td><td>SIL OFL 1.1</td><td>Yes, with licence file</td></tr>
+      <tr><td>JetBrains Mono (font)</td><td>JetBrains, <a href="https://github.com/JetBrains/JetBrainsMono" rel="noopener">github.com/JetBrains/JetBrainsMono</a></td><td>SIL OFL 1.1</td><td>Yes, with licence file</td></tr>
+      <tr><td>Lucide icons</td><td>Lucide contributors, <a href="https://lucide.dev" rel="noopener">lucide.dev</a> (lucide-static 1.75.0)</td><td>ISC</td><td>Yes, inlined, with licence file</td></tr>
+      <tr><td>Social glyphs, logo, favicon, map illustration, UI graphics</td><td>TemplateFlux (original work)</td><td>Included under your item licence</td><td>Yes</td></tr>
+      <tr><td>Placeholder images</td><td>TemplateFlux (generated from scratch)</td><td>Included under your item licence</td><td>Yes</td></tr>
+      <tr><td>Demo product, hero, blog and about photography</td><td>AI-generated for the live preview and screenshots only</td><td>Preview only</td><td><strong>No</strong></td></tr>
+    </tbody>
+  </table></div>
+  <p>All product names, brands, people, reviews and figures in the demo are fictional. No JavaScript libraries, CSS frameworks or third-party services are used.</p>
+
+  <!-- ============================================================ -->
+  <h2 id="changelog">Changelog</h2>
+  <h3>v1.0.0 · Initial release</h3>
+  <ul>
+    <li>13 pages, complete design system, storefront interactions, documentation.</li>
+  </ul>
+
+  <!-- ============================================================ -->
+  <h2 id="troubleshooting">Troubleshooting</h2>
+  <div class="note">
+    <p>Below are solutions for the most common setup questions and troubleshooting scenarios encountered when working with static HTML templates.</p>
+  </div>
+
+  <h3>1. Changes to CSS or data aren't showing up in the browser</h3>
+  <p>Modern browsers aggressively cache static assets. When you edit <code>style.css</code> or <code>data.js</code>:</p>
+  <ul>
+    <li>Perform a hard reload: <kbd>Ctrl</kbd> + <kbd>F5</kbd> (Windows/Linux) or <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> (macOS).</li>
+    <li>Update the cache-busting version query string in the HTML <code>&lt;head&gt;</code>, e.g. <code>assets/css/style.css?v=1.0.1</code>.</li>
+    <li>Open DevTools (<kbd>F12</kbd>), switch to the <em>Network</em> tab, and check <em>Disable cache</em> while DevTools is open.</li>
+  </ul>
+
+  <h3>2. Cart or wishlist items do not persist after reloading</h3>
+  <p>Some modern browsers (such as Safari and Chrome) restrict access to <code>localStorage</code> when pages are opened directly from the filesystem using the <code>file://</code> protocol. Always preview the template through a local development server:</p>
+  <pre><code># Python 3
+python3 -m http.server 8080
+
+# or Node.js
+npx serve .</code></pre>
+  <p>Then navigate to <code>http://localhost:8080</code> in your browser.</p>
+
+  <h3>3. How to connect the contact form to a live email inbox</h3>
+  <p>The included contact and newsletter forms feature client-side JavaScript validation. To send real emails without managing your own backend server, you can submit to a form forwarding service such as <a href="https://formspree.io" rel="noopener">Formspree</a>, <a href="https://usebasin.com" rel="noopener">UseBasin</a>, or Netlify Forms:</p>
+  <pre><code>&lt;form action="https://formspree.io/f/your_form_id" method="POST"&gt;
+  &lt;!-- Existing form fields remain identical --&gt;
+&lt;/form&gt;</code></pre>
+
+  <h3>4. How to integrate real payment processing</h3>
+  <p>The checkout interface simulates an e-commerce order workflow without charging cards or storing customer credentials. To collect real payments, replace the simulated submit handler in <code>assets/js/pages.js</code> with a real gateway SDK (such as Stripe Checkout or PayPal JS SDK). Search for <code>INTEGRATION POINT</code> in <code>pages.js</code> and <code>checkout.html</code> for guided instructions.</p>
+
+  <h3>5. My replacement images appear distorted or stretched</h3>
+  <p>NEXORA uses modern CSS <code>object-fit: cover</code> to protect aspect ratios. For the cleanest visual presentation, match the native aspect ratios of the placeholder assets:</p>
+  <ul>
+    <li>Product main &amp; gallery images: <strong>800 × 800 px</strong> (1:1 square)</li>
+    <li>Blog article covers: <strong>1200 × 750 px</strong> (16:10 ratio)</li>
+    <li>Hero main image: <strong>1312 × 816 px</strong></li>
+    <li>About lineup photo: <strong>1800 × 900 px</strong> (2:1 panoramic ratio)</li>
+  </ul>
+
+  <!-- ============================================================ -->
+  <h2 id="support">Support</h2>
+  <p>If you have questions about using or customising NEXORA, contact TemplateFlux through the support tab of the item page on ThemeForest. Please include your purchase code, a link to your site (if online) and steps to reproduce any issue.</p>
+  <p>Item support covers answering questions about the template, help with included features and fixes for reported bugs. It does not include custom development, third-party integrations, or problems caused by modifications.</p>
+  <p style="color:var(--muted);margin-top:48px">© 2026 TemplateFlux. Thanks again for your purchase.</p>
+</main>
+</div>
+</body>
+</html>

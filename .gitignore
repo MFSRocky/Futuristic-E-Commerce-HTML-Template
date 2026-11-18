@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+.npm/
+
+# Vercel
+.vercel/
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+
+# Testing & Temporary
+tmp_test_extract/
+/tmp/
+*.log
+
+# OS generated
+.DS_Store
+Thumbs.db
+desktop.ini
+.sudo_as_admin_successful

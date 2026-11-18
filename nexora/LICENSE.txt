@@ -1,0 +1,38 @@
+Envato Market Regular / Extended License Summary
+======================================================================
+
+NEXORA is licensed for use under the terms of the Envato Market License.
+Please review the complete terms at:
+https://themeforest.net/licenses/standard
+
+SUMMARY OF TERMS:
+----------------------------------------------------------------------
+1. Regular License:
+   - Grants you an ongoing, non-exclusive, worldwide license to make use of
+     the digital work you have purchased.
+   - You are licensed to use the Item to create one single End Product for
+     yourself or for one client (a "single application").
+   - The End Product may be distributed freely or hosted publicly, provided
+     the End Product itself is not offered for sale or redistribution.
+
+2. Extended License:
+   - Grants the same permissions as the Regular License, but the End Product
+     may be sold or made available to end users for a fee (e.g., a commercial
+     subscription SaaS or monetized software).
+
+RESTRICTIONS:
+----------------------------------------------------------------------
+- You cannot re-distribute or sell the Item template files as stock, in a tool,
+  or as part of any other website template or site builder.
+- You cannot claim copyright or authorship over the template code or original
+  assets.
+
+THIRD-PARTY LICENSES:
+----------------------------------------------------------------------
+Third-party assets included within this package (fonts, icons) are licensed
+under their respective open-source licenses as detailed in CREDITS.txt:
+- Syne Typeface: SIL Open Font License 1.1
+- Inter Typeface: SIL Open Font License 1.1
+- JetBrains Mono Typeface: SIL Open Font License 1.1
+- Lucide Icons: ISC License
+All third-party licenses permit commercial redistribution with this package.

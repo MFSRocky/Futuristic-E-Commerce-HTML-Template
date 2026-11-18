@@ -1,0 +1,87 @@
+<!--meta {"title": "Checkout — NEXORA", "description": "Secure demo checkout for the NEXORA e-commerce template.", "page": "checkout"} -->
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <div>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a>{{icon:chevron-right}}<a href="cart.html">Cart</a>{{icon:chevron-right}}<span aria-current="page">Checkout</span></nav>
+      <h1 class="page-hero__title"><span class="text-gradient">Checkout</span></h1>
+    </div>
+    <div class="steps" aria-label="Checkout progress">
+      <span class="step is-done"><span class="step__no">{{icon:check}}</span><span class="step__label">Cart</span></span><span class="step__sep"></span>
+      <span class="step is-current"><span class="step__no">2</span><span class="step__label">Details</span></span><span class="step__sep"></span>
+      <span class="step"><span class="step__no">3</span><span class="step__label">Confirmation</span></span>
+    </div>
+  </div>
+</section>
+<section class="section section--tight">
+  <div class="container">
+    <div class="cart-layout" id="checkout-layout">
+      <form id="checkout-form" novalidate>
+        <div class="demo-notice" role="note">{{icon:info}}<p><strong>Demonstration checkout.</strong> This template has no backend or payment gateway — no data is sent and no payment is taken. Use the demo card <button class="link-arrow" type="button" data-fill-demo-card style="display:inline;color:var(--c-cyan);text-decoration:underline">4242 4242 4242 4242</button> to try the flow.</p></div>
+
+        <fieldset class="checkout-section" style="border:1px solid var(--c-line)">
+          <legend class="sr-only">Contact information</legend>
+          <h2 class="checkout-section__title" aria-hidden="true"><span>1</span>Contact</h2>
+          <div class="form-grid">
+            <div class="field"><label for="co-email">Email <span class="req" aria-hidden="true">*</span></label><input class="input" id="co-email" type="email" autocomplete="email" data-validate="required email" aria-describedby="co-email-err" required><p class="field__error" id="co-email-err">{{icon:circle-alert}}Enter a valid email address.</p></div>
+            <div class="field"><label for="co-phone">Phone <span class="req" aria-hidden="true">*</span></label><input class="input" id="co-phone" type="tel" autocomplete="tel" data-validate="required phone" aria-describedby="co-phone-err" required><p class="field__error" id="co-phone-err">{{icon:circle-alert}}Enter a valid phone number.</p></div>
+            <label class="check span-2"><input type="checkbox" checked><span class="check__box">{{icon:check}}</span>Email me order updates and exclusive offers</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="checkout-section" style="border:1px solid var(--c-line)">
+          <legend class="sr-only">Shipping address</legend>
+          <h2 class="checkout-section__title" aria-hidden="true"><span>2</span>Shipping address</h2>
+          <div class="form-grid">
+            <div class="field"><label for="co-first">First name <span class="req" aria-hidden="true">*</span></label><input class="input" id="co-first" autocomplete="given-name" data-validate="required" aria-describedby="co-first-err" required><p class="field__error" id="co-first-err">{{icon:circle-alert}}First name is required.</p></div>
+            <div class="field"><label for="co-last">Last name <span class="req" aria-hidden="true">*</span></label><input class="input" id="co-last" autocomplete="family-name" data-validate="required" aria-describedby="co-last-err" required><p class="field__error" id="co-last-err">{{icon:circle-alert}}Last name is required.</p></div>
+            <div class="field span-2"><label for="co-address">Street address <span class="req" aria-hidden="true">*</span></label><input class="input" id="co-address" autocomplete="street-address" data-validate="required" aria-describedby="co-address-err" required><p class="field__error" id="co-address-err">{{icon:circle-alert}}Street address is required.</p></div>
+            <div class="field"><label for="co-city">City <span class="req" aria-hidden="true">*</span></label><input class="input" id="co-city" autocomplete="address-level2" data-validate="required" aria-describedby="co-city-err" required><p class="field__error" id="co-city-err">{{icon:circle-alert}}City is required.</p></div>
+            <div class="field"><label for="co-zip">Postal code <span class="req" aria-hidden="true">*</span></label><input class="input" id="co-zip" autocomplete="postal-code" data-validate="required zip" aria-describedby="co-zip-err" required><p class="field__error" id="co-zip-err">{{icon:circle-alert}}Enter a valid postal code.</p></div>
+            <div class="field span-2"><label for="co-country">Country <span class="req" aria-hidden="true">*</span></label>
+              <select class="select" id="co-country" autocomplete="country-name" data-validate="required" aria-describedby="co-country-err" required>
+                <option value="">Select a country</option><option>United States</option><option>Canada</option><option>United Kingdom</option><option>Germany</option><option>France</option><option>Netherlands</option><option>Egypt</option><option>United Arab Emirates</option><option>Singapore</option><option>Australia</option><option>Japan</option>
+              </select><p class="field__error" id="co-country-err">{{icon:circle-alert}}Please choose a country.</p></div>
+          </div>
+        </fieldset>
+
+        <fieldset class="checkout-section" style="border:1px solid var(--c-line)">
+          <legend class="sr-only">Shipping method</legend>
+          <h2 class="checkout-section__title" aria-hidden="true"><span>3</span>Delivery</h2>
+          <div class="radio-cards">
+            <label class="radio-card"><input type="radio" name="shipping" value="standard" checked><span class="radio-card__dot"></span><span class="radio-card__text"><strong>Standard delivery</strong><small>3–5 business days · free over $150</small></span><span class="radio-card__price" data-ship-price="standard">Free</span></label>
+            <label class="radio-card"><input type="radio" name="shipping" value="express"><span class="radio-card__dot"></span><span class="radio-card__text"><strong>Express delivery</strong><small>1–2 business days · tracked &amp; insured</small></span><span class="radio-card__price">$24.00</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="checkout-section" style="border:1px solid var(--c-line)">
+          <legend class="sr-only">Payment</legend>
+          <h2 class="checkout-section__title" aria-hidden="true"><span>4</span>Payment <small class="badge" style="margin-left:auto">{{icon:lock}} Demo only</small></h2>
+          <div class="form-grid">
+            <div class="field span-2"><label for="cc-name">Name on card <span class="req" aria-hidden="true">*</span></label><input class="input" id="cc-name" autocomplete="cc-name" data-validate="required" aria-describedby="cc-name-err" required><p class="field__error" id="cc-name-err">{{icon:circle-alert}}Name on card is required.</p></div>
+            <div class="field span-2"><label for="cc-number">Card number <span class="req" aria-hidden="true">*</span></label><div class="card-input"><input class="input" id="cc-number" inputmode="numeric" autocomplete="cc-number" placeholder="1234 5678 9012 3456" data-validate="required card" aria-describedby="cc-number-err" required>{{icon:credit-card}}</div><p class="field__error" id="cc-number-err">{{icon:circle-alert}}Enter a valid card number (try 4242 4242 4242 4242).</p></div>
+            <div class="field"><label for="cc-exp">Expiry (MM / YY) <span class="req" aria-hidden="true">*</span></label><input class="input" id="cc-exp" inputmode="numeric" autocomplete="cc-exp" placeholder="MM / YY" data-validate="required expiry" aria-describedby="cc-exp-err" required><p class="field__error" id="cc-exp-err">{{icon:circle-alert}}Enter a future expiry date.</p></div>
+            <div class="field"><label for="cc-cvc">Security code <span class="req" aria-hidden="true">*</span></label><input class="input" id="cc-cvc" inputmode="numeric" autocomplete="cc-csc" placeholder="CVC" data-validate="required cvc" aria-describedby="cc-cvc-err" required><p class="field__error" id="cc-cvc-err">{{icon:circle-alert}}3 or 4 digits.</p></div>
+            <div class="field span-2 check-field"><label class="check"><input type="checkbox" id="co-terms" data-validate="checked" aria-describedby="co-terms-err" required><span class="check__box">{{icon:check}}</span>I agree to the terms of sale and understand this is a demonstration checkout.</label><p class="field__error" id="co-terms-err">{{icon:circle-alert}}Please accept the terms to continue.</p></div>
+          </div>
+        </fieldset>
+        <button class="btn btn--primary btn--lg btn--block mt-6" type="submit">{{icon:lock}}Place order · <span data-pay-total>$0.00</span></button>
+      </form>
+      <aside class="summary-card" id="checkout-summary" aria-label="Order summary"></aside>
+    </div>
+    <div id="checkout-empty" hidden>
+      <div class="empty-state"><span class="empty-state__icon">{{icon:package}}</span><h2 class="h-card" style="font-size:var(--fs-xl)">Nothing to check out yet</h2><p>Your cart is empty. Add a product to try the demo checkout flow.</p><a class="btn btn--primary" href="shop.html">Browse products {{icon:arrow-right|icon--move}}</a></div>
+    </div>
+  </div>
+</section>
+<div class="modal" id="order-success" aria-hidden="true" inert>
+  <div class="modal__backdrop"></div>
+  <div class="modal__dialog modal__dialog--sm" role="dialog" aria-modal="true" aria-labelledby="success-title">
+    <div class="success-modal">
+      <span class="success-modal__icon">{{icon:check}}</span>
+      <h2 id="success-title" class="h-card" style="font-size:var(--fs-xl)">Order confirmed!</h2>
+      <p class="text-muted">Order <strong data-order-no>NX-000000</strong> · <strong data-order-total>$0.00</strong><br>A confirmation would be sent to <span data-order-email></span>.</p>
+      <p class="field__hint">Demo only — no payment was processed and no data left your browser.</p>
+      <div class="chip-row" style="justify-content:center;margin-top:.5rem"><a class="btn btn--primary" href="shop.html">Continue shopping</a><a class="btn btn--ghost" href="index.html">Back to home</a></div>
+    </div>
+  </div>
+</div>

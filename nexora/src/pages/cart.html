@@ -1,0 +1,46 @@
+<!--meta {"title": "Shopping Cart — NEXORA", "description": "Review the items in your NEXORA cart, apply a coupon and proceed to checkout.", "page": "cart"} -->
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <div>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a>{{icon:chevron-right}}<span aria-current="page">Cart</span></nav>
+      <h1 class="page-hero__title">Shopping <span class="text-gradient">cart</span></h1>
+      <p class="lead" id="cart-heading-count" aria-live="polite">0 items</p>
+    </div>
+    <div class="steps" aria-label="Checkout progress">
+      <span class="step is-current"><span class="step__no">1</span><span class="step__label">Cart</span></span><span class="step__sep"></span>
+      <span class="step"><span class="step__no">2</span><span class="step__label">Details</span></span><span class="step__sep"></span>
+      <span class="step"><span class="step__no">3</span><span class="step__label">Confirmation</span></span>
+    </div>
+  </div>
+</section>
+<section class="section section--tight">
+  <div class="container">
+    <div class="cart-layout" id="cart-layout" hidden>
+      <div>
+        <div class="cart-table" role="table" aria-label="Cart items">
+          <div class="cart-table__head" role="row"><span role="columnheader">Product</span><span role="columnheader">Price</span><span role="columnheader">Quantity</span><span role="columnheader">Total</span><span role="columnheader"><span class="sr-only">Remove</span></span></div>
+          <div id="cart-rows" role="rowgroup"></div>
+        </div>
+        <div class="cart-actions">
+          <a class="btn btn--ghost" href="shop.html">{{icon:arrow-left}}Continue shopping</a>
+          <button class="btn btn--ghost" type="button" id="clear-cart">{{icon:trash-2}}Clear cart</button>
+        </div>
+      </div>
+      <aside class="summary-card" id="cart-summary" aria-label="Order summary"></aside>
+    </div>
+    <div id="cart-empty" hidden>
+      <div class="empty-state">
+        <span class="empty-state__icon">{{icon:shopping-bag}}</span>
+        <h2 class="h-card" style="font-size:var(--fs-xl)">Your cart is empty</h2>
+        <p>Looks like you haven't added anything yet. The future is just a click away.</p>
+        <div class="chip-row" style="justify-content:center"><a class="btn btn--primary" href="shop.html">Start shopping {{icon:arrow-right|icon--move}}</a><a class="btn btn--ghost" href="wishlist.html">{{icon:heart}}View wishlist</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section section--tight">
+  <div class="container">
+    <div class="section-head"><div class="section-head__text" data-reveal><span class="eyebrow">Recommended</span><h2 class="h-section">Pairs perfectly with</h2></div></div>
+    <div class="product-grid" data-products="bestsellers" data-limit="4"></div>
+  </div>
+</section>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Journal — NEXORA Blog</title>
+  <meta name="description" content="Stories on design, technology, gaming and wellness from the NEXORA studio.">
+  <meta name="theme-color" content="#090B12">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:title" content="Journal — NEXORA Blog">
+  <meta property="og:description" content="Stories on design, technology, gaming and wellness from the NEXORA studio.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/images/brand/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/syne-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css?v=1.0.0">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body data-page="blog">
+<!-- ================= SVG ICON SPRITE (usage example: <svg class="icon"><use href="#i-search"/></svg>) ================= -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><!-- Icons: Lucide (ISC licence) + NEXORA custom glyphs --><symbol id="i-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34" /> <circle cx="11" cy="11" r="8" /></symbol><symbol id="i-shopping-bag" viewBox="0 0 24 24"><path d="M16 10a4 4 0 0 1-8 0" /> <path d="M3.103 6.034h17.794" /> <path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z" /></symbol><symbol id="i-heart" viewBox="0 0 24 24"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" /></symbol><symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /> <circle cx="12" cy="7" r="4" /></symbol><symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 5h16" /> <path d="M4 12h16" /> <path d="M4 19h16" /></symbol><symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18" /> <path d="m6 6 12 12" /></symbol><symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" /></symbol><symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6" /></symbol><symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6" /></symbol><symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14" /> <path d="m12 5 7 7-7 7" /></symbol><symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 7h10v10" /> <path d="M7 17 17 7" /></symbol><symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7" /> <path d="M12 19V5" /></symbol><symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7" /> <path d="M19 12H5" /></symbol><symbol id="i-star" viewBox="0 0 24 24"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></symbol><symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" /> <circle cx="12" cy="12" r="3" /></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14" /> <path d="M12 5v14" /></symbol><symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14" /></symbol><symbol id="i-trash-2" viewBox="0 0 24 24"><path d="M10 11v6" /> <path d="M14 11v6" /> <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" /> <path d="M3 6h18" /> <path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" /></symbol><symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" /> <path d="M15 18H9" /> <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" /> <circle cx="17" cy="18" r="2" /> <circle cx="7" cy="18" r="2" /></symbol><symbol id="i-shield-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path d="m9 12 2 2 4-4" /></symbol><symbol id="i-rotate-ccw" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" /> <path d="M3 3v5h5" /></symbol><symbol id="i-headphones" viewBox="0 0 24 24"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3" /></symbol><symbol id="i-watch" viewBox="0 0 24 24"><path d="M12 10v2.2l1.6 1" /> <path d="m16.13 7.66-.81-4.05a2 2 0 0 0-2-1.61h-2.68a2 2 0 0 0-2 1.61l-.78 4.05" /> <path d="m7.88 16.36.8 4a2 2 0 0 0 2 1.61h2.72a2 2 0 0 0 2-1.61l.81-4.05" /> <circle cx="12" cy="12" r="6" /></symbol><symbol id="i-gamepad-2" viewBox="0 0 24 24"><line x1="6" x2="10" y1="11" y2="11" /> <line x1="8" x2="8" y1="9" y2="13" /> <line x1="15" x2="15.01" y1="12" y2="12" /> <line x1="18" x2="18.01" y1="10" y2="10" /> <path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z" /></symbol><symbol id="i-package" viewBox="0 0 24 24"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" /> <path d="M12 22V12" /> <polyline points="3.29 7 12 12 20.71 7" /> <path d="m7.5 4.27 9 5.15" /></symbol><symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" /> <path d="M20 2v4" /> <path d="M22 4h-4" /> <circle cx="4" cy="20" r="2" /></symbol><symbol id="i-zap" viewBox="0 0 24 24"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z" /></symbol><symbol id="i-mail" viewBox="0 0 24 24"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" /> <rect x="2" y="4" width="20" height="16" rx="2" /></symbol><symbol id="i-phone" viewBox="0 0 24 24"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" /></symbol><symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /> <circle cx="12" cy="10" r="3" /></symbol><symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /> <path d="M12 6v6l4 2" /></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></symbol><symbol id="i-circle-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /></symbol><symbol id="i-circle-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /> <line x1="12" x2="12" y1="8" y2="12" /> <line x1="12" x2="12.01" y1="16" y2="16" /></symbol><symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /> <path d="M12 16v-4" /> <path d="M12 8h.01" /></symbol><symbol id="i-sliders-horizontal" viewBox="0 0 24 24"><path d="M10 5H3" /> <path d="M12 19H3" /> <path d="M14 3v4" /> <path d="M16 17v4" /> <path d="M21 12h-9" /> <path d="M21 19h-5" /> <path d="M21 5h-7" /> <path d="M8 10v4" /> <path d="M8 12H3" /></symbol><symbol id="i-layout-grid" viewBox="0 0 24 24"><rect width="7" height="7" x="3" y="3" rx="1" /> <rect width="7" height="7" x="14" y="3" rx="1" /> <rect width="7" height="7" x="14" y="14" rx="1" /> <rect width="7" height="7" x="3" y="14" rx="1" /></symbol><symbol id="i-list" viewBox="0 0 24 24"><path d="M3 5h.01" /> <path d="M3 12h.01" /> <path d="M3 19h.01" /> <path d="M8 5h13" /> <path d="M8 12h13" /> <path d="M8 19h13" /></symbol><symbol id="i-tag" viewBox="0 0 24 24"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z" /> <circle cx="7.5" cy="7.5" r=".5" fill="currentColor" /></symbol><symbol id="i-credit-card" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="5" rx="2" /> <line x1="2" x2="22" y1="10" y2="10" /> <path d="M6 14h2" /></symbol><symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /> <path d="M7 11V7a5 5 0 0 1 10 0v4" /></symbol><symbol id="i-gift" viewBox="0 0 24 24"><path d="M12 7v14" /> <path d="M20 11v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8" /> <path d="M7.5 7a1 1 0 0 1 0-5A4.8 8 0 0 1 12 7a4.8 8 0 0 1 4.5-5 1 1 0 0 1 0 5" /> <rect x="3" y="7" width="18" height="4" rx="1" /></symbol><symbol id="i-send" viewBox="0 0 24 24"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" /> <path d="m21.854 2.147-10.94 10.939" /></symbol><symbol id="i-cpu" viewBox="0 0 24 24"><path d="M12 20v2" /> <path d="M12 2v2" /> <path d="M17 20v2" /> <path d="M17 2v2" /> <path d="M2 12h2" /> <path d="M2 17h2" /> <path d="M2 7h2" /> <path d="M20 12h2" /> <path d="M20 17h2" /> <path d="M20 7h2" /> <path d="M7 20v2" /> <path d="M7 2v2" /> <rect x="4" y="4" width="16" height="16" rx="2" /> <rect x="8" y="8" width="8" height="8" rx="1" /></symbol><symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20a10 10 0 0010-10 25.9 25.9 0 00-1.04-7.281 1 1 0 00-1.755-.325C15.833 5.5 13 5.5 9.8 6.1A7 7 0 0011 20" /> <path d="M2 21a5 5 0 012.911-4.544C7.613 15.212 8.351 15.24 11 13" /></symbol><symbol id="i-award" viewBox="0 0 24 24"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" /> <circle cx="12" cy="8" r="6" /></symbol><symbol id="i-message-circle" viewBox="0 0 24 24"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719" /></symbol><symbol id="i-calendar" viewBox="0 0 24 24"><path d="M8 2v3" /> <path d="M16 2v3" /> <rect x="3" y="3" width="18" height="18" rx="2" /> <path d="M3 9h18" /></symbol><symbol id="i-share-2" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3" /> <circle cx="6" cy="12" r="3" /> <circle cx="18" cy="19" r="3" /> <line x1="8.59" x2="15.42" y1="13.51" y2="17.49" /> <line x1="15.41" x2="8.59" y1="6.51" y2="10.49" /></symbol><symbol id="i-copy" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /> <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></symbol><symbol id="i-ticket" viewBox="0 0 24 24"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z" /> <path d="M13 5v2" /> <path d="M13 17v2" /> <path d="M13 11v2" /></symbol><symbol id="i-badge-percent" viewBox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" /> <path d="m15 9-6 6" /> <path d="M9 9h.01" /> <path d="M15 15h.01" /></symbol><symbol id="i-user-round" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5" /> <path d="M20 21a8 8 0 0 0-16 0" /></symbol><symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4" /></symbol><symbol id="i-circle-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /> <path d="M9 9.5a3 2.5 0 016 0c0 2-2 2-3 3.5" /> <path d="M12 17h.01" /></symbol><symbol id="i-wallet" viewBox="0 0 24 24"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1" /> <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4" /></symbol><symbol id="i-refresh-cw" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" /> <path d="M21 3v5h-5" /> <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" /> <path d="M8 16H3v5" /></symbol><symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /> <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" /> <path d="M2 12h20" /></symbol><symbol id="i-social-x" viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20"/></symbol><symbol id="i-social-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></symbol><symbol id="i-social-youtube" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor"/></symbol><symbol id="i-social-tiktok" viewBox="0 0 24 24"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.6 2.6 2.4 4.3 5 4.6"/></symbol></svg>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="page-bg" aria-hidden="true"></div>
+<!-- ================= ANNOUNCEMENT BAR + HEADER (shared on every page) ================= -->
+<div class="announce" role="region" aria-label="Announcements">
+  <div class="container announce__inner">
+    <div class="announce__track" aria-live="off">
+      <p class="announce__msg is-active"><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-truck"></use></svg> <span><strong>Free express shipping</strong> on orders over $150</span></p>
+      <p class="announce__msg" aria-hidden="true" inert><span>Winter Drop 07 is live — <a href="shop.html?sort=newest">explore new arrivals</a></span></p>
+      <p class="announce__msg" aria-hidden="true" inert><span>Use code <strong>NEXORA10</strong> for 10% off your first order</span></p>
+    </div>
+    <button class="announce__close" type="button" aria-label="Dismiss announcements"><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-x"></use></svg></button>
+  </div>
+</div>
+<header class="header" id="top">
+  <div class="container header__inner">
+    <button class="icon-btn header__menu-btn" type="button" data-open="mobile-nav" aria-controls="mobile-nav" aria-expanded="false" aria-label="Open menu"><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-menu"></use></svg></button>
+    <a class="logo" href="index.html" aria-label="NEXORA home"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg-h" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#A855F7"/><stop offset="1" stop-color="#00E5FF"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="9" fill="none" stroke="url(#lg-h)" stroke-width="1.5" opacity=".55"/><path d="M9 23V9h3.6l6.8 8.6V9H23v14h-3.6l-6.8-8.6V23z" fill="url(#lg-h)"/></svg><span>NEXORA<span class="logo__dot">.</span></span></a>
+    <nav class="nav" aria-label="Primary"><ul class="nav__list"><li class="nav__item"><a class="nav__link" href="index.html">Home</a></li><li class="nav__item" data-menu>
+  <a class="nav__link" href="shop.html" aria-expanded="false" aria-controls="mega-shop" aria-haspopup="true">Shop<svg class="icon " aria-hidden="true" focusable="false"><use href="#i-chevron-down"></use></svg></a>
+  <div class="mega" id="mega-shop"><div class="container"><div class="mega__panel">
+    <div><p class="mega__title">Categories</p><ul class="mega__cats"><li><a href="shop.html?cat=audio"><span class="mega__cat-icon"><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-headphones"></use></svg></span><span><strong>Audio</strong><small>Headphones · earbuds · speakers</small></span></a></li><li><a href="shop.html?cat=wearables"><span class="mega__cat-icon"><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-watch"></use></svg></span><span><strong>Wearables</strong><small>Watches · rings · AR glasses</small></span></a></li><li><a href="shop.html?cat=gaming"><span class="mega__cat-icon"><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-gamepad-2"></use></svg></span><span><strong>Gaming</strong><small>Controllers · keyboards · mice</small></span></a></li><li><a href="shop.html?cat=bundles"><span class="mega__cat-icon"><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-package"></use></svg></span><span><strong>Bundles</strong><small>Curated kits, save up to 15%</small></span></a></li></ul></div>
+    <div><p class="mega__title">Collections</p><ul class="mega__links">
+      <li><a href="shop.html?sort=newest">New arrivals <span class="badge badge--new">Drop 07</span></a></li>
+      <li><a href="shop.html?sort=popular">Best sellers</a></li>
+      <li><a href="shop.html?sale=1">On sale <span class="badge badge--sale">−15%</span></a></li>
+      <li><a href="shop.html?sort=rating">Top rated</a></li>
+      <li><a href="shop.html">Shop all products</a></li>
+    </ul></div>
+    <div><p class="mega__title">Explore</p><ul class="mega__links">
+      <li><a href="product.html?id=aether-x1">Aether X1 Headphones</a></li>
+      <li><a href="product.html?id=chronos-s">Chronos S Smartwatch</a></li>
+      <li><a href="product.html?id=flux-75">Flux 75 Keyboard</a></li>
+      <li><a href="categories.html">All categories</a></li>
+      <li><a href="faq.html">Shipping &amp; returns</a></li>
+    </ul></div>
+    <a class="mega__feature" href="product.html?id=vision-lens"><img src="assets/images/products/vision-lens.webp" alt="" width="800" height="800" loading="lazy">
+      <span class="badge badge--new">Just landed</span><h3>Vision Lens AR</h3><span class="link-arrow">Discover <svg class="icon " aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"></use></svg></span></a>
+  </div></div></div>
+</li><li class="nav__item"><a class="nav__link" href="categories.html">Categories</a></li><li class="nav__item nav__item--dropdown" data-menu>
+  <button class="nav__link" type="button" aria-expanded="false" aria-controls="dd-pages" aria-haspopup="true">Pages<svg class="icon " aria-hidden="true" focusable="false"><use href="#i-chevron-down"></use></svg></button>
+  <div class="dropdown" id="dd-pages"><ul class="dropdown__panel"><li><a href="about.html">About Us<svg class="icon " aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></a></li><li><a href="faq.html">FAQ<svg class="icon " aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></a></li><li><a href="wishlist.html">Wishlist<svg class="icon " aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></a></li><li><a href="cart.html">Shopping Cart<svg class="icon " aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></a></li><li><a href="checkout.html">Checkout<svg class="icon " aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></a></li><li><a href="product.html?id=aether-x1">Product Details<svg class="icon " aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></a></li><li><a href="blog-details.html">Blog Details<svg class="icon " aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></a></li><li><a href="404.html">404 Error<svg class="icon " aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></a></li></ul></div>
+</li><li class="nav__item"><a class="nav__link" href="blog.html" aria-current="page">Blog</a></li><li class="nav__item"><a class="nav__link" href="contact.html">Contact</a></li></ul></nav>
+    <div class="header__actions">
+      <button class="icon-btn" type="button" data-action="open-search" aria-label="Search products (press /)"><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-search"></use></svg></button>
+      <a class="icon-btn hide-mobile" href="wishlist.html" aria-label="Wishlist" data-wish-label><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-heart"></use></svg><span class="count-badge" data-count="wishlist" aria-hidden="true">0</span></a>
+      <a class="icon-btn hide-tablet" href="contact.html" aria-label="Account and support"><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-user"></use></svg></a>
+      <button class="icon-btn" type="button" data-action="open-cart" data-cart-label aria-label="Open cart" aria-controls="cart-drawer"><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-shopping-bag"></use></svg><span class="count-badge" data-count="cart" aria-hidden="true">0</span></button>
+    </div>
+  </div>
+</header>
+<!-- ================= MOBILE NAVIGATION (shared) ================= -->
+<div class="mobile-nav" id="mobile-nav" aria-hidden="true" inert>
+  <div class="mobile-nav__backdrop"></div>
+  <div class="mobile-nav__panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="mobile-nav__head"><a class="logo" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg-m" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#A855F7"/><stop offset="1" stop-color="#00E5FF"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="9" fill="none" stroke="url(#lg-m)" stroke-width="1.5" opacity=".55"/><path d="M9 23V9h3.6l6.8 8.6V9H23v14h-3.6l-6.8-8.6V23z" fill="url(#lg-m)"/></svg><span>NEXORA<span class="logo__dot">.</span></span></a>
+      <button class="icon-btn icon-btn--bordered" type="button" data-action="close-layer" aria-label="Close menu"><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-x"></use></svg></button></div>
+    <div class="mobile-nav__body"><ul class="mobile-nav__list">
+      <li><a class="mobile-nav__link" href="index.html">Home</a></li>
+      <li><button class="mobile-nav__toggle" type="button" aria-expanded="false" aria-controls="m-shop">Shop<svg class="icon " aria-hidden="true" focusable="false"><use href="#i-plus"></use></svg></button><div class="mobile-nav__sub" id="m-shop"><ul><li><a href="shop.html">All products</a></li><li><a href="shop.html?cat=audio">Audio</a></li><li><a href="shop.html?cat=wearables">Wearables</a></li><li><a href="shop.html?cat=gaming">Gaming</a></li><li><a href="shop.html?cat=bundles">Bundles</a></li><li><a href="shop.html?sale=1">On sale</a></li></ul></div></li>
+      <li><a class="mobile-nav__link" href="categories.html">Categories</a></li>
+      <li><button class="mobile-nav__toggle" type="button" aria-expanded="false" aria-controls="m-pages">Pages<svg class="icon " aria-hidden="true" focusable="false"><use href="#i-plus"></use></svg></button><div class="mobile-nav__sub" id="m-pages"><ul><li><a href="about.html">About Us</a></li><li><a href="faq.html">FAQ</a></li><li><a href="wishlist.html">Wishlist</a></li><li><a href="cart.html">Shopping Cart</a></li><li><a href="checkout.html">Checkout</a></li><li><a href="product.html?id=aether-x1">Product Details</a></li><li><a href="blog-details.html">Blog Details</a></li><li><a href="404.html">404 Error</a></li></ul></div></li>
+      <li><a class="mobile-nav__link" href="blog.html" aria-current="page">Blog</a></li>
+      <li><a class="mobile-nav__link" href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="mobile-nav__foot">
+      <a class="btn btn--ghost btn--block" href="wishlist.html"><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-heart"></use></svg> Wishlist</a>
+      <button class="btn btn--primary btn--block" type="button" data-action="open-search"><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-search"></use></svg> Search products</button>
+    </div>
+  </div>
+</div>
+<!-- ================= PAGE CONTENT ================= -->
+<main id="main" tabindex="-1">
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <div>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-chevron-right"></use></svg><span aria-current="page">Journal</span></nav>
+      <h1 class="page-hero__title">The <span class="text-gradient">Journal</span></h1>
+      <p class="lead">Field notes on design, technology and the objects shaping what comes next.</p>
+    </div>
+    <div class="chip-row" role="group" aria-label="Filter stories">
+      <button class="chip" type="button" data-blog-filter="all" aria-pressed="true">All</button>
+      <button class="chip" type="button" data-blog-filter="technology" aria-pressed="false">Technology</button>
+      <button class="chip" type="button" data-blog-filter="design" aria-pressed="false">Design</button>
+      <button class="chip" type="button" data-blog-filter="gaming" aria-pressed="false">Gaming</button>
+      <button class="chip" type="button" data-blog-filter="wellness" aria-pressed="false">Wellness</button>
+    </div>
+  </div>
+</section>
+<section class="section section--tight">
+  <div class="container">
+    <article class="post-feature" data-reveal="scale">
+      <div class="post-feature__media"><img src="assets/images/blog/spatial-computing.webp" alt="Vision Lens AR glasses with iridescent lenses" width="1200" height="750"></div>
+      <div class="post-feature__body">
+        <span class="badge badge--new" style="align-self:flex-start">Featured · Technology</span>
+        <h2><a href="blog-details.html">Spatial computing is finally wearable</a></h2>
+        <p class="text-muted">After a decade of bulky headsets, a new generation of 79-gram glasses is quietly changing how we work, watch and create. Here's what changed.</p>
+        <div class="post-meta"><span><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-user-round"></use></svg>Elena Laurent</span><span><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-calendar"></use></svg>Nov 12, 2026</span><span><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-clock"></use></svg>8 min read</span></div>
+        <span class="link-arrow">Read the story <svg class="icon " aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"></use></svg></span>
+      </div>
+    </article>
+    <div class="post-grid">
+      <article class="post-card" data-cat="design" data-reveal><div class="post-card__media"><img src="assets/images/blog/smartwatch-interface.webp" alt="Close-up of the Chronos S watch face" width="1200" height="750" loading="lazy"><span class="badge">Design</span></div><div class="post-card__body"><div class="post-meta"><span>Nov 05, 2026</span><span>6 min read</span></div><h3><a href="blog-details.html">The quiet interface: designing a watch you barely notice</a></h3><p>Why the best smartwatch notification is the one you never see.</p><span class="link-arrow">Read more <svg class="icon " aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"></use></svg></span></div></article>
+      <article class="post-card" data-cat="gaming" data-reveal style="--rd:80"><div class="post-card__media"><img src="assets/images/blog/mechanical-renaissance.webp" alt="Flux 75 mechanical keyboard with underglow" width="1200" height="750" loading="lazy"><span class="badge">Gaming</span></div><div class="post-card__body"><div class="post-meta"><span>Oct 28, 2026</span><span>7 min read</span></div><h3><a href="blog-details.html">Inside the mechanical keyboard renaissance</a></h3><p>Gaskets, foam and 8K polling: the engineering behind a perfect keystroke.</p><span class="link-arrow">Read more <svg class="icon " aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"></use></svg></span></div></article>
+      <article class="post-card" data-cat="wellness" data-reveal style="--rd:160"><div class="post-card__media"><img src="assets/images/blog/invisible-wearables.webp" alt="Halo smart ring macro shot" width="1200" height="750" loading="lazy"><span class="badge">Wellness</span></div><div class="post-card__body"><div class="post-meta"><span>Oct 16, 2026</span><span>5 min read</span></div><h3><a href="blog-details.html">Invisible wearables and the future of health</a></h3><p>A 4-gram ring now knows more about your sleep than a lab did in 2010.</p><span class="link-arrow">Read more <svg class="icon " aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"></use></svg></span></div></article>
+      <article class="post-card" data-cat="technology" data-reveal><div class="post-card__media"><img src="assets/images/blog/sound-architecture.webp" alt="Orbit 360 speaker with glowing light ring" width="1200" height="750" loading="lazy"><span class="badge">Technology</span></div><div class="post-card__body"><div class="post-meta"><span>Oct 02, 2026</span><span>9 min read</span></div><h3><a href="blog-details.html">Sound architecture: how we tuned Orbit 360</a></h3><p>Eighteen months, three anechoic chambers and one very patient acoustics team.</p><span class="link-arrow">Read more <svg class="icon " aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"></use></svg></span></div></article>
+      <article class="post-card" data-cat="gaming" data-reveal style="--rd:80"><div class="post-card__media"><img src="assets/images/blog/haptic-play.webp" alt="Vector Pro controller in translucent black" width="1200" height="750" loading="lazy"><span class="badge">Gaming</span></div><div class="post-card__body"><div class="post-meta"><span>Sep 19, 2026</span><span>6 min read</span></div><h3><a href="blog-details.html">Haptics are the new graphics</a></h3><p>Adaptive triggers and HD rumble are redefining what “immersive” means.</p><span class="link-arrow">Read more <svg class="icon " aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"></use></svg></span></div></article>
+      <article class="post-card" data-cat="design" data-reveal style="--rd:160"><div class="post-card__media"><img src="assets/images/blog/spatial-computing.webp" alt="Vision Lens AR glasses" width="1200" height="750" loading="lazy"><span class="badge">Design</span></div><div class="post-card__body"><div class="post-meta"><span>Sep 03, 2026</span><span>4 min read</span></div><h3><a href="blog-details.html">Designing eyewear people actually want to wear</a></h3><p>Weight, warmth and the psychology of putting technology on your face.</p><span class="link-arrow">Read more <svg class="icon " aria-hidden="true" focusable="false"><use href="#i-arrow-up-right"></use></svg></span></div></article>
+      <div class="empty-state" id="blog-empty" hidden><span class="empty-state__icon"><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-sparkles"></use></svg></span><h3>More stories coming soon</h3><p>We're writing new articles in this category. Subscribe to get them first.</p></div>
+    </div>
+    <div class="newsletter mt-7" data-reveal="scale">
+      <div><span class="eyebrow">Newsletter</span><h2 class="h-section" style="margin-top:.75rem">New stories, every other Thursday.</h2></div>
+      <div><form class="inline-form" data-newsletter><label for="blog-nl" class="sr-only">Email address</label><input id="blog-nl" type="email" placeholder="you@example.com" autocomplete="email" required><button class="btn btn--primary" type="submit">Subscribe <svg class="icon " aria-hidden="true" focusable="false"><use href="#i-send"></use></svg></button></form><p class="form-message" role="status" aria-live="polite"></p></div>
+    </div>
+  </div>
+</section>
+</main>
+<!-- ================= FOOTER (shared) ================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="logo" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg-f" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#A855F7"/><stop offset="1" stop-color="#00E5FF"/></linearGradient></defs><rect x="1" y="1" width="30" height="30" rx="9" fill="none" stroke="url(#lg-f)" stroke-width="1.5" opacity=".55"/><path d="M9 23V9h3.6l6.8 8.6V9H23v14h-3.6l-6.8-8.6V23z" fill="url(#lg-f)"/></svg><span>NEXORA<span class="logo__dot">.</span></span></a>
+        <p>Objects from the near future. Designed in our studio, engineered for everyday life, delivered carbon-neutral worldwide.</p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="NEXORA on Instagram"><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-social-instagram"></use></svg></a>
+          <a href="https://x.com/" target="_blank" rel="noopener" aria-label="NEXORA on X"><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-social-x"></use></svg></a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="NEXORA on YouTube"><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-social-youtube"></use></svg></a>
+          <a href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="NEXORA on TikTok"><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-social-tiktok"></use></svg></a>
+        </div>
+      </div>
+      <div><h2 class="footer__title">Shop</h2><ul class="footer__links"><li><a href="shop.html">All products</a></li><li><a href="shop.html?cat=audio">Audio</a></li><li><a href="shop.html?cat=wearables">Wearables</a></li><li><a href="shop.html?cat=gaming">Gaming</a></li><li><a href="shop.html?cat=bundles">Bundles</a></li></ul></div><div><h2 class="footer__title">Company</h2><ul class="footer__links"><li><a href="about.html">About us</a></li><li><a href="blog.html">Journal</a></li><li><a href="categories.html">Categories</a></li><li><a href="contact.html">Contact</a></li><li><a href="404.html">404 page</a></li></ul></div><div><h2 class="footer__title">Support</h2><ul class="footer__links"><li><a href="faq.html">FAQ</a></li><li><a href="faq.html#shipping">Shipping</a></li><li><a href="faq.html#returns">Returns</a></li><li><a href="wishlist.html">Wishlist</a></li><li><a href="cart.html">Cart</a></li></ul></div>
+      <div><h2 class="footer__title">Contact</h2><ul class="footer__contact">
+        <li><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-map-pin"></use></svg><span>210 Orbit Avenue, Suite 7<br>San Francisco, CA 94107</span></li>
+        <li><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-phone"></use></svg><a href="tel:+14155550142">+1 (415) 555-0142</a></li>
+        <li><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-mail"></use></svg><a href="mailto:hello@nexora.example">hello@nexora.example</a></li>
+      </ul></div>
+    </div>
+    <div class="footer__bottom">
+      <p>© <span data-year>2026</span> NEXORA. Template by TemplateFlux. All rights reserved.</p>
+      <div class="footer__pay" aria-label="Accepted payment methods"><span><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-credit-card"></use></svg>Cards</span><span><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-wallet"></use></svg>Wallets</span><span><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-calendar"></use></svg>Pay later</span><span><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-lock"></use></svg>SSL secured</span></div>
+    </div>
+  </div>
+  <div class="footer__wordmark" aria-hidden="true">NEXORA</div>
+</footer>
+<!-- ================= OVERLAYS: search, cart drawer, quick view, toasts (shared) ================= -->
+<div class="search" id="search" aria-hidden="true" inert>
+  <div class="search__backdrop"></div>
+  <div class="search__panel" role="dialog" aria-modal="true" aria-label="Search products">
+    <form class="search__bar" id="search-form" role="search"><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-search"></use></svg>
+      <label for="search-input" class="sr-only">Search products</label>
+      <input class="search__input" id="search-input" type="search" placeholder="Search devices, categories…" autocomplete="off" aria-controls="search-results">
+      <button class="icon-btn icon-btn--bordered" type="button" data-action="close-layer" aria-label="Close search"><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-x"></use></svg></button>
+    </form>
+    <div class="search__body">
+      <div id="search-popular"><p class="search__label">Popular searches</p><div class="chip-row" style="margin-bottom:1.5rem"><button class="chip" type="button" data-term="Headphones">Headphones</button><button class="chip" type="button" data-term="Wireless">Wireless</button><button class="chip" type="button" data-term="Smartwatch">Smartwatch</button><button class="chip" type="button" data-term="Gaming">Gaming</button><button class="chip" type="button" data-term="AR glasses">AR glasses</button><button class="chip" type="button" data-term="Bundle">Bundle</button></div></div>
+      <p class="search__label" id="search-label" aria-live="polite">Trending now</p>
+      <div class="search__results" id="search-results"></div>
+    </div>
+    <div class="search__footer"><span><span class="kbd">Enter</span> see all results</span><span><span class="kbd">Esc</span> close</span></div>
+  </div>
+</div>
+<div class="drawer" id="cart-drawer" aria-hidden="true" inert>
+  <div class="drawer__backdrop"></div>
+  <aside class="drawer__panel" role="dialog" aria-modal="true" aria-labelledby="cart-drawer-title">
+    <div class="drawer__head"><h2 id="cart-drawer-title">Your cart <small data-drawer-count>(0)</small></h2>
+      <button class="icon-btn icon-btn--bordered" type="button" data-action="close-layer" aria-label="Close cart"><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-x"></use></svg></button></div>
+    <div class="drawer__body" aria-live="polite"></div>
+    <div class="drawer__foot" hidden>
+      <div class="summary-row"><span>Subtotal</span><strong data-drawer-subtotal>$0.00</strong></div>
+      <div class="summary-row summary-row--discount" data-drawer-discount-row hidden><span>Coupon</span><strong data-drawer-discount></strong></div>
+      <p class="field__hint">Shipping, taxes and coupons are calculated at checkout.</p>
+      <div class="drawer__btns"><a class="btn btn--ghost" href="cart.html">View cart</a><a class="btn btn--primary" href="checkout.html">Checkout <svg class="icon icon--move" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></a></div>
+    </div>
+  </aside>
+</div>
+<div class="modal" id="quick-view" aria-hidden="true" inert>
+  <div class="modal__backdrop"></div>
+  <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="qv-title">
+    <button class="icon-btn icon-btn--solid modal__close" type="button" data-action="close-layer" aria-label="Close quick view"><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-x"></use></svg></button>
+    <div data-qv-content></div>
+  </div>
+</div>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<button class="icon-btn icon-btn--solid back-to-top" type="button" aria-label="Back to top"><svg class="icon " aria-hidden="true" focusable="false"><use href="#i-arrow-up"></use></svg></button>
+<div class="page-curtain" aria-hidden="true"></div>
+<!-- ================= SCRIPTS (order matters: data → core → components → pages → main) ================= -->
+<script src="assets/js/data.js?v=1.0.0" defer></script>
+<script src="assets/js/core.js?v=1.0.0" defer></script>
+<script src="assets/js/components.js?v=1.0.0" defer></script>
+<script src="assets/js/pages.js?v=1.0.0" defer></script>
+<script src="assets/js/main.js?v=1.0.0" defer></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!--meta {"title": "Contact — NEXORA", "description": "Get in touch with the NEXORA team for orders, product support, press and partnerships.", "page": "contact"} -->
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <div>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a>{{icon:chevron-right}}<span aria-current="page">Contact</span></nav>
+      <h1 class="page-hero__title">Let's <span class="text-gradient">talk</span></h1>
+      <p class="lead">Questions about an order, a product or a partnership? Our team replies within one business day.</p>
+    </div>
+    <span class="badge badge--stock">● Support online · avg. reply 2h</span>
+  </div>
+</section>
+<section class="section section--tight">
+  <div class="container contact-layout">
+    <div class="contact-cards">
+      <div class="contact-card" data-reveal><span class="contact-card__icon">{{icon:mail}}</span><div><h2>Email us</h2><a href="mailto:hello@nexora.example">hello@nexora.example</a></div></div>
+      <div class="contact-card" data-reveal style="--rd:80"><span class="contact-card__icon">{{icon:phone}}</span><div><h2>Call us</h2><a href="tel:+14155550142">+1 (415) 555-0142</a></div></div>
+      <div class="contact-card" data-reveal style="--rd:160"><span class="contact-card__icon">{{icon:map-pin}}</span><div><h2>Visit the studio</h2><p>210 Orbit Avenue, Suite 7<br>San Francisco, CA 94107</p></div></div>
+      <div class="contact-card" data-reveal style="--rd:240"><span class="contact-card__icon">{{icon:clock}}</span><div><h2>Opening hours</h2><p>Mon–Fri · 9:00–19:00 PT<br>Sat · 10:00–16:00 PT</p></div></div>
+    </div>
+    <div class="form-card" data-reveal="scale">
+      <h2>Send a message</h2>
+      <p>Fields marked <span class="req" style="color:var(--c-violet)">*</span> are required. This demo form validates input but does not send data.</p>
+      <form id="contact-form" novalidate>
+        <div class="form-grid">
+          <div class="field"><label for="ct-name">Full name <span class="req" aria-hidden="true">*</span></label><input class="input" id="ct-name" autocomplete="name" data-validate="required" aria-describedby="ct-name-err" required><p class="field__error" id="ct-name-err">{{icon:circle-alert}}Please enter your name.</p></div>
+          <div class="field"><label for="ct-email">Email <span class="req" aria-hidden="true">*</span></label><input class="input" id="ct-email" type="email" autocomplete="email" data-validate="required email" aria-describedby="ct-email-err" required><p class="field__error" id="ct-email-err">{{icon:circle-alert}}Enter a valid email address.</p></div>
+          <div class="field span-2"><label for="ct-topic">Topic <span class="req" aria-hidden="true">*</span></label><select class="select" id="ct-topic" data-validate="required" aria-describedby="ct-topic-err" required><option value="">Choose a topic</option><option>Order status</option><option>Product support</option><option>Returns &amp; warranty</option><option>Press &amp; partnerships</option><option>Something else</option></select><p class="field__error" id="ct-topic-err">{{icon:circle-alert}}Please choose a topic.</p></div>
+          <div class="field span-2"><label for="ct-order">Order number <span class="text-muted">(optional)</span></label><input class="input" id="ct-order" placeholder="NX-XXXXXX"></div>
+          <div class="field span-2"><label for="ct-msg">Message <span class="req" aria-hidden="true">*</span></label><textarea class="textarea" id="ct-msg" data-validate="required min10" aria-describedby="ct-msg-err" required></textarea><p class="field__error" id="ct-msg-err">{{icon:circle-alert}}Your message should be at least 10 characters.</p></div>
+          <div class="field span-2 check-field"><label class="check"><input type="checkbox" id="ct-consent" data-validate="checked" aria-describedby="ct-consent-err" required><span class="check__box">{{icon:check}}</span>I agree that NEXORA may use my details to respond to this enquiry.</label><p class="field__error" id="ct-consent-err">{{icon:circle-alert}}Consent is required.</p></div>
+        </div>
+        <button class="btn btn--primary btn--lg mt-6" type="submit">Send message {{icon:send}}</button>
+        <p class="form-message" id="contact-msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+<section class="section section--tight">
+  <div class="container">
+    <div class="map" data-reveal="scale" role="img" aria-label="Stylised map showing the NEXORA studio in San Francisco">
+      <svg viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs><pattern id="mapgrid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="rgba(255,255,255,.05)"/></pattern>
+        <linearGradient id="road" x1="0" x2="1"><stop stop-color="#A855F7" stop-opacity=".6"/><stop offset="1" stop-color="#00E5FF" stop-opacity=".6"/></linearGradient></defs>
+        <rect width="1200" height="420" fill="url(#mapgrid)"/>
+        <path d="M0 310 C 200 280, 320 340, 520 300 S 900 180, 1200 220" stroke="rgba(255,255,255,.12)" stroke-width="14" fill="none"/>
+        <path d="M0 310 C 200 280, 320 340, 520 300 S 900 180, 1200 220" stroke="url(#road)" stroke-width="2" fill="none"/>
+        <path d="M640 0 L 660 420 M 300 0 L 380 420 M 900 0 L 840 420 M 0 120 L 1200 150" stroke="rgba(255,255,255,.08)" stroke-width="6" fill="none"/>
+        <path d="M0 0 H 1200 V 70 C 1000 110, 800 40, 600 80 S 200 60, 0 100 Z" fill="rgba(0,229,255,.05)"/>
+        <g fill="rgba(255,255,255,.04)"><rect x="420" y="160" width="120" height="70" rx="8"/><rect x="700" y="230" width="90" height="60" rx="8"/><rect x="160" y="170" width="100" height="80" rx="8"/><rect x="960" y="260" width="140" height="80" rx="8"/></g>
+      </svg>
+      <div class="map__pin"><div class="map__label">NEXORA Studio<small>210 Orbit Ave, San Francisco</small></div><span class="map__pin-dot"></span></div>
+    </div>
+  </div>
+</section>

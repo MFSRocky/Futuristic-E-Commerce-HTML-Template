@@ -1,0 +1,44 @@
+<!--meta {"title": "Journal — NEXORA Blog", "description": "Stories on design, technology, gaming and wellness from the NEXORA studio.", "page": "blog"} -->
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <div>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a>{{icon:chevron-right}}<span aria-current="page">Journal</span></nav>
+      <h1 class="page-hero__title">The <span class="text-gradient">Journal</span></h1>
+      <p class="lead">Field notes on design, technology and the objects shaping what comes next.</p>
+    </div>
+    <div class="chip-row" role="group" aria-label="Filter stories">
+      <button class="chip" type="button" data-blog-filter="all" aria-pressed="true">All</button>
+      <button class="chip" type="button" data-blog-filter="technology" aria-pressed="false">Technology</button>
+      <button class="chip" type="button" data-blog-filter="design" aria-pressed="false">Design</button>
+      <button class="chip" type="button" data-blog-filter="gaming" aria-pressed="false">Gaming</button>
+      <button class="chip" type="button" data-blog-filter="wellness" aria-pressed="false">Wellness</button>
+    </div>
+  </div>
+</section>
+<section class="section section--tight">
+  <div class="container">
+    <article class="post-feature" data-reveal="scale">
+      <div class="post-feature__media"><img src="assets/images/blog/spatial-computing.webp" alt="Vision Lens AR glasses with iridescent lenses" width="1200" height="750"></div>
+      <div class="post-feature__body">
+        <span class="badge badge--new" style="align-self:flex-start">Featured · Technology</span>
+        <h2><a href="blog-details.html">Spatial computing is finally wearable</a></h2>
+        <p class="text-muted">After a decade of bulky headsets, a new generation of 79-gram glasses is quietly changing how we work, watch and create. Here's what changed.</p>
+        <div class="post-meta"><span>{{icon:user-round}}Elena Laurent</span><span>{{icon:calendar}}Nov 12, 2026</span><span>{{icon:clock}}8 min read</span></div>
+        <span class="link-arrow">Read the story {{icon:arrow-up-right}}</span>
+      </div>
+    </article>
+    <div class="post-grid">
+      <article class="post-card" data-cat="design" data-reveal><div class="post-card__media"><img src="assets/images/blog/smartwatch-interface.webp" alt="Close-up of the Chronos S watch face" width="1200" height="750" loading="lazy"><span class="badge">Design</span></div><div class="post-card__body"><div class="post-meta"><span>Nov 05, 2026</span><span>6 min read</span></div><h3><a href="blog-details.html">The quiet interface: designing a watch you barely notice</a></h3><p>Why the best smartwatch notification is the one you never see.</p><span class="link-arrow">Read more {{icon:arrow-up-right}}</span></div></article>
+      <article class="post-card" data-cat="gaming" data-reveal style="--rd:80"><div class="post-card__media"><img src="assets/images/blog/mechanical-renaissance.webp" alt="Flux 75 mechanical keyboard with underglow" width="1200" height="750" loading="lazy"><span class="badge">Gaming</span></div><div class="post-card__body"><div class="post-meta"><span>Oct 28, 2026</span><span>7 min read</span></div><h3><a href="blog-details.html">Inside the mechanical keyboard renaissance</a></h3><p>Gaskets, foam and 8K polling: the engineering behind a perfect keystroke.</p><span class="link-arrow">Read more {{icon:arrow-up-right}}</span></div></article>
+      <article class="post-card" data-cat="wellness" data-reveal style="--rd:160"><div class="post-card__media"><img src="assets/images/blog/invisible-wearables.webp" alt="Halo smart ring macro shot" width="1200" height="750" loading="lazy"><span class="badge">Wellness</span></div><div class="post-card__body"><div class="post-meta"><span>Oct 16, 2026</span><span>5 min read</span></div><h3><a href="blog-details.html">Invisible wearables and the future of health</a></h3><p>A 4-gram ring now knows more about your sleep than a lab did in 2010.</p><span class="link-arrow">Read more {{icon:arrow-up-right}}</span></div></article>
+      <article class="post-card" data-cat="technology" data-reveal><div class="post-card__media"><img src="assets/images/blog/sound-architecture.webp" alt="Orbit 360 speaker with glowing light ring" width="1200" height="750" loading="lazy"><span class="badge">Technology</span></div><div class="post-card__body"><div class="post-meta"><span>Oct 02, 2026</span><span>9 min read</span></div><h3><a href="blog-details.html">Sound architecture: how we tuned Orbit 360</a></h3><p>Eighteen months, three anechoic chambers and one very patient acoustics team.</p><span class="link-arrow">Read more {{icon:arrow-up-right}}</span></div></article>
+      <article class="post-card" data-cat="gaming" data-reveal style="--rd:80"><div class="post-card__media"><img src="assets/images/blog/haptic-play.webp" alt="Vector Pro controller in translucent black" width="1200" height="750" loading="lazy"><span class="badge">Gaming</span></div><div class="post-card__body"><div class="post-meta"><span>Sep 19, 2026</span><span>6 min read</span></div><h3><a href="blog-details.html">Haptics are the new graphics</a></h3><p>Adaptive triggers and HD rumble are redefining what “immersive” means.</p><span class="link-arrow">Read more {{icon:arrow-up-right}}</span></div></article>
+      <article class="post-card" data-cat="design" data-reveal style="--rd:160"><div class="post-card__media"><img src="assets/images/blog/spatial-computing.webp" alt="Vision Lens AR glasses" width="1200" height="750" loading="lazy"><span class="badge">Design</span></div><div class="post-card__body"><div class="post-meta"><span>Sep 03, 2026</span><span>4 min read</span></div><h3><a href="blog-details.html">Designing eyewear people actually want to wear</a></h3><p>Weight, warmth and the psychology of putting technology on your face.</p><span class="link-arrow">Read more {{icon:arrow-up-right}}</span></div></article>
+      <div class="empty-state" id="blog-empty" hidden><span class="empty-state__icon">{{icon:sparkles}}</span><h3>More stories coming soon</h3><p>We're writing new articles in this category. Subscribe to get them first.</p></div>
+    </div>
+    <div class="newsletter mt-7" data-reveal="scale">
+      <div><span class="eyebrow">Newsletter</span><h2 class="h-section" style="margin-top:.75rem">New stories, every other Thursday.</h2></div>
+      <div><form class="inline-form" data-newsletter><label for="blog-nl" class="sr-only">Email address</label><input id="blog-nl" type="email" placeholder="you@example.com" autocomplete="email" required><button class="btn btn--primary" type="submit">Subscribe {{icon:send}}</button></form><p class="form-message" role="status" aria-live="polite"></p></div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,46 @@
+<!--meta {"title": "Product Details — NEXORA", "description": "Product details, specifications and reviews at NEXORA, the futuristic tech store.", "page": "product"} -->
+<div class="container" style="padding-top:2rem">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a>{{icon:chevron-right}}<a href="shop.html">Shop</a>{{icon:chevron-right}}<a href="shop.html" data-pdp-cat>Category</a>{{icon:chevron-right}}<span aria-current="page" data-pdp-crumb>Product</span></nav>
+</div>
+<section class="section section--tight" style="padding-top:2rem">
+  <div class="container">
+    <div class="pdp" id="pdp-root">
+      <h1 class="sr-only">Product details</h1>
+      <div class="skeleton" style="aspect-ratio:1"><div class="skeleton__media"></div></div>
+      <div><div class="skeleton__line" style="width:40%"></div><div class="skeleton__line" style="height:40px"></div><div class="skeleton__line"></div></div>
+    </div>
+    <div class="tabs-panel">
+      <h2 class="sr-only">Product information</h2>
+      <div class="tab-list" role="tablist" aria-label="Product information" id="pdp-tablist">
+        <button class="tab-btn" role="tab" id="tab-btn-desc" aria-selected="true" aria-controls="tab-description">Description</button>
+        <button class="tab-btn" role="tab" id="tab-btn-specs" aria-selected="false" aria-controls="tab-specs" tabindex="-1">Specifications</button>
+        <button class="tab-btn" role="tab" id="tab-btn-reviews" aria-selected="false" aria-controls="tab-reviews" tabindex="-1">Reviews</button>
+        <button class="tab-btn" role="tab" id="tab-btn-ship" aria-selected="false" aria-controls="tab-shipping" tabindex="-1">Shipping &amp; returns</button>
+      </div>
+      <div class="tab-pane" role="tabpanel" id="tab-description" aria-labelledby="tab-btn-desc"></div>
+      <div class="tab-pane" role="tabpanel" id="tab-specs" aria-labelledby="tab-btn-specs" hidden></div>
+      <div class="tab-pane" role="tabpanel" id="tab-reviews" aria-labelledby="tab-btn-reviews" hidden></div>
+      <div class="tab-pane" role="tabpanel" id="tab-shipping" aria-labelledby="tab-btn-ship" hidden>
+        <div class="prose">
+          <p>Orders placed before 3 pm ship the same day from our carbon-neutral fulfilment centres in Reno, Rotterdam and Singapore.</p>
+          <ul>
+            <li><strong>Standard (3–5 days):</strong> free over $150, otherwise $12.00</li>
+            <li><strong>Express (1–2 days):</strong> $24.00, tracked and insured</li>
+            <li><strong>Returns:</strong> free 30-day returns with a prepaid label — just keep the original packaging</li>
+            <li><strong>Warranty:</strong> 2-year Nexora Care with advance replacement</li>
+          </ul>
+          <p>Read more in our <a href="faq.html#shipping">shipping FAQ</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section section--tight">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-head__text" data-reveal><span class="eyebrow">You may also like</span><h2 class="h-section">Complete the setup</h2></div>
+      <a class="link-arrow" href="shop.html" data-reveal>Shop all {{icon:arrow-up-right}}</a>
+    </div>
+    <div class="product-grid" id="related-grid"></div>
+  </div>
+</section>

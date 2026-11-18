@@ -1,0 +1,43 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+@font-face { font-family: Syne; src: url(file:///home/user/nexora/site/assets/fonts/syne-latin-700-normal.woff2); font-weight: 700; }
+@font-face { font-family: Syne; src: url(file:///home/user/nexora/site/assets/fonts/syne-latin-800-normal.woff2); font-weight: 800; }
+@font-face { font-family: Inter; src: url(file:///home/user/nexora/site/assets/fonts/inter-latin-400-normal.woff2); font-weight: 400; }
+@font-face { font-family: Inter; src: url(file:///home/user/nexora/site/assets/fonts/inter-latin-600-normal.woff2); font-weight: 600; }
+@font-face { font-family: Mono; src: url(file:///home/user/nexora/site/assets/fonts/jetbrains-mono-latin-500-normal.woff2); font-weight: 500; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #090B12; color: #F4F4F7; font-family: Inter, sans-serif; -webkit-font-smoothing: antialiased; }
+.canvas { position: relative; overflow: hidden; background:
+  radial-gradient(60% 50% at 85% 0%, rgba(168,85,247,.28), transparent 70%),
+  radial-gradient(50% 40% at 0% 100%, rgba(0,229,255,.16), transparent 70%), #090B12; }
+.canvas::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 48px 48px; mask-image: radial-gradient(80% 70% at 50% 30%, #000, transparent); pointer-events: none; }
+.eyebrow { font-family: Mono; font-size: 13px; letter-spacing: .22em; text-transform: uppercase; color: #00E5FF; display: inline-flex; align-items: center; gap: 12px; }
+.eyebrow::before { content: ""; width: 28px; height: 1px; background: currentColor; }
+.title { font-family: Syne; font-weight: 700; letter-spacing: -.02em; line-height: 1.02; }
+.grad { background: linear-gradient(100deg, #D8B4FE, #A855F7 40%, #00E5FF); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.muted { color: #A1A7BB; }
+.browser { border-radius: 14px; overflow: hidden; background: #0F1220; border: 1px solid rgba(255,255,255,.12); box-shadow: 0 40px 90px -30px rgba(0,0,0,.9), 0 0 0 1px rgba(168,85,247,.08); }
+.browser .bar { height: 30px; display: flex; align-items: center; gap: 7px; padding: 0 14px; background: #131726; border-bottom: 1px solid rgba(255,255,255,.07); }
+.browser .bar i { width: 10px; height: 10px; border-radius: 50%; background: #2C3146; }
+.browser .bar span { margin-left: 14px; flex: 1; max-width: 46%; height: 16px; border-radius: 8px; background: #1B2033; font: 500 9.5px/16px Mono; color: #6E7590; padding-left: 10px; }
+.browser img { display: block; width: 100%; }
+.phone { border-radius: 38px; padding: 9px; background: linear-gradient(160deg, #2A2F45, #12141F); box-shadow: 0 40px 80px -25px rgba(0,0,0,.9), inset 0 0 0 1px rgba(255,255,255,.12); }
+.phone .scr { border-radius: 30px; overflow: hidden; position: relative; background: #090B12; }
+.phone .scr img { display: block; width: 100%; }
+.tablet { border-radius: 28px; padding: 12px; background: linear-gradient(160deg, #2A2F45, #12141F); box-shadow: 0 40px 80px -25px rgba(0,0,0,.9), inset 0 0 0 1px rgba(255,255,255,.12); }
+.tablet .scr { border-radius: 17px; overflow: hidden; }
+.tablet .scr img { display: block; width: 100%; }
+.crop { overflow: hidden; }
+.crop img { display: block; width: 100%; }
+.chip { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,.12); background: rgba(23,26,39,.7); font-size: 14px; color: #D3D6E0; }
+.chip b { width: 7px; height: 7px; border-radius: 50%; background: linear-gradient(135deg, #A855F7, #00E5FF); }
+.logo { display: inline-flex; align-items: center; gap: 12px; font-family: Syne; font-weight: 800; letter-spacing: .1em; }
+.logo i { display: grid; place-items: center; font-style: normal; border-radius: 10px; border: 1.5px solid #6D7CFF; color: #7DD3FC; font-family: Syne; }
+.label { font-family: Mono; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: #A1A7BB; margin-top: 12px; }
+</style></head><body>
+<div class="canvas" style="width:900px;padding:56px 50px 60px">
+  <span class="eyebrow">Shop</span>
+  <h2 class="title" style="font-size:42px;margin:14px 0 10px">Filter, sort, <span class="grad">find fast</span></h2>
+  <p class="muted" style="font-size:16px;margin-bottom:32px">Search · categories · dual price range · rating · availability · active-filter chips · grid / list · load more</p>
+  <div class="browser" style=""><div class="bar"><i></i><i></i><i></i><span>nexora.store</span></div><img src="file:///home/user/nexora/preview-assets/screenshots/desktop-shop-full.jpg"></div>
+  <div style="display:flex;gap:18px;margin-top:26px;justify-content:center"><div class="phone" style="width:200px;"><div class="scr" style="height:433px"><img src="file:///home/user/nexora/preview-assets/screenshots/mobile-shop.jpg"></div></div><div class="phone" style="width:200px;"><div class="scr" style="height:433px"><img src="file:///home/user/nexora/preview-assets/screenshots/state-mobile-filters@2x.jpg"></div></div></div>
+</div></body></html>

@@ -1,0 +1,33 @@
+NEXORA — Futuristic E-commerce HTML Template · v1.0.0
+Author: TemplateFlux
+==========================================================
+
+FONTS (self-hosted in template/assets/fonts, licence files included)
+- Syne — The Syne Project Authors / Bonjour Monde — SIL Open Font License 1.1
+  https://gitlab.com/bonjour-monde/fonderie/syne-typeface
+- Inter — The Inter Project Authors (Rasmus Andersson) — SIL Open Font License 1.1
+  https://github.com/rsms/inter
+- JetBrains Mono — The JetBrains Mono Project Authors — SIL Open Font License 1.1
+  https://github.com/JetBrains/JetBrainsMono
+  (WOFF2 files obtained via Fontsource 5.3.0 — https://fontsource.org)
+
+ICONS
+- Lucide — Lucide Icons and Contributors — ISC License (lucide-static 1.75.0)
+  https://lucide.dev — licence: template/assets/icons/LICENSE-Lucide-ISC.txt
+- Social glyphs (X, Instagram, YouTube, TikTok style marks), logo, favicon,
+  map illustration and all UI graphics — original work by TemplateFlux.
+  Third-party trademarks belong to their respective owners.
+
+IMAGES
+- The images in template/assets/images are placeholders created by TemplateFlux
+  and are included under your item licence.
+- The product, hero, blog and about photography shown in the live demo and
+  marketplace screenshots is for PREVIEW PURPOSES ONLY and is NOT INCLUDED.
+
+LIBRARIES / FRAMEWORKS
+- None. NEXORA uses no JavaScript libraries, CSS frameworks or third-party services.
+
+DEMO CONTENT
+- All brands, products, people, reviews, addresses and figures are fictional.
+- Checkout and payment are a demonstration interface only: no payment is processed
+  and no data leaves the browser.

@@ -1,0 +1,30 @@
+<!--meta {"title": "Wishlist — NEXORA", "description": "Your saved NEXORA products. Your wishlist is stored on this device.", "page": "wishlist"} -->
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <div>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a>{{icon:chevron-right}}<span aria-current="page">Wishlist</span></nav>
+      <h1 class="page-hero__title">Your <span class="text-gradient">wishlist</span></h1>
+      <p class="lead" id="wish-count" aria-live="polite">0 saved items</p>
+    </div>
+  </div>
+</section>
+<section class="section section--tight">
+  <div class="container">
+    <div class="wish-toolbar" id="wish-toolbar" hidden>
+      <p class="text-muted" style="font-size:.875rem">{{icon:info}} Saved on this device using local storage.</p>
+      <div class="chip-row">
+        <button class="btn btn--sm btn--ghost" type="button" id="wish-share">{{icon:share-2}}Share list</button>
+        <button class="btn btn--sm btn--ghost" type="button" id="wish-clear">{{icon:trash-2}}Clear</button>
+        <button class="btn btn--sm btn--primary" type="button" id="wish-add-all">{{icon:shopping-bag}}Add all to cart</button>
+      </div>
+    </div>
+    <h2 class="sr-only">Saved items</h2>
+    <div class="product-grid" id="wish-grid" aria-live="polite"></div>
+  </div>
+</section>
+<section class="section section--tight">
+  <div class="container">
+    <div class="section-head"><div class="section-head__text" data-reveal><span class="eyebrow">Inspiration</span><h2 class="h-section">Trending this week</h2></div></div>
+    <div class="product-grid" data-products="trending" data-limit="4"></div>
+  </div>
+</section>

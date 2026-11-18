@@ -1,0 +1,92 @@
+<!--meta {"title": "Shop All Products — NEXORA", "description": "Browse NEXORA's full collection of futuristic audio, wearables, gaming gear and curated bundles. Filter by category, price and rating.", "page": "shop"} -->
+<section class="page-hero">
+  <div class="container page-hero__inner">
+    <div>
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a>{{icon:chevron-right}}<span aria-current="page">Shop</span></nav>
+      <h1 class="page-hero__title">The <span class="text-gradient">collection</span></h1>
+      <p class="lead">13 precision-engineered products across audio, wearables, gaming and curated bundles.</p>
+    </div>
+    <div class="chip-row">
+      <a class="chip" href="shop.html?cat=audio">{{icon:headphones}}Audio</a>
+      <a class="chip" href="shop.html?cat=wearables">{{icon:watch}}Wearables</a>
+      <a class="chip" href="shop.html?cat=gaming">{{icon:gamepad-2}}Gaming</a>
+      <a class="chip" href="shop.html?sale=1">{{icon:badge-percent}}On sale</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container shop">
+    <div class="filters-backdrop" aria-hidden="true"></div>
+    <aside class="filters" id="filters" aria-label="Product filters">
+      <div class="filters__head"><h2>Filters</h2><button class="icon-btn icon-btn--bordered" type="button" data-close-filters aria-label="Close filters">{{icon:x}}</button></div>
+      <div class="filter-block">
+        <form id="shop-search-form" role="search" class="search-field">
+          <label for="shop-search" class="sr-only">Search products</label>
+          {{icon:search}}<input class="input" id="shop-search" type="search" placeholder="Search products…" autocomplete="off">
+        </form>
+      </div>
+      <fieldset class="filter-block" style="border:1px solid var(--c-line)">
+        <legend class="sr-only">Category</legend>
+        <p class="filter-block__title" aria-hidden="true">Category</p>
+        <label class="check"><input type="checkbox" name="cat" value="audio"><span class="check__box">{{icon:check}}</span>Audio<span class="check__count" data-cat-count="audio"></span></label>
+        <label class="check"><input type="checkbox" name="cat" value="wearables"><span class="check__box">{{icon:check}}</span>Wearables<span class="check__count" data-cat-count="wearables"></span></label>
+        <label class="check"><input type="checkbox" name="cat" value="gaming"><span class="check__box">{{icon:check}}</span>Gaming<span class="check__count" data-cat-count="gaming"></span></label>
+        <label class="check"><input type="checkbox" name="cat" value="bundles"><span class="check__box">{{icon:check}}</span>Bundles<span class="check__count" data-cat-count="bundles"></span></label>
+      </fieldset>
+      <div class="filter-block">
+        <p class="filter-block__title" id="price-label">Price range</p>
+        <div class="range" role="group" aria-labelledby="price-label">
+          <div class="range__track"><div class="range__fill"></div></div>
+          <input type="range" id="price-min" step="10" aria-label="Minimum price">
+          <input type="range" id="price-max" step="10" aria-label="Maximum price">
+        </div>
+        <div class="range__values"><output id="price-min-out" for="price-min">$0</output><output id="price-max-out" for="price-max">$900</output></div>
+      </div>
+      <fieldset class="filter-block" style="border:1px solid var(--c-line)">
+        <legend class="sr-only">Rating</legend>
+        <p class="filter-block__title" aria-hidden="true">Rating</p>
+        <label class="check check--radio"><input type="radio" name="rating" value="0" checked><span class="check__box">{{icon:check}}</span>Any rating</label>
+        <label class="check check--radio"><input type="radio" name="rating" value="4.5"><span class="check__box">{{icon:check}}</span><span class="stars" style="--pct:90%" aria-hidden="true"></span>4.5 &amp; up</label>
+        <label class="check check--radio"><input type="radio" name="rating" value="4.8"><span class="check__box">{{icon:check}}</span><span class="stars" style="--pct:96%" aria-hidden="true"></span>4.8 &amp; up</label>
+      </fieldset>
+      <fieldset class="filter-block" style="border:1px solid var(--c-line)">
+        <legend class="sr-only">Availability</legend>
+        <p class="filter-block__title" aria-hidden="true">Availability</p>
+        <label class="check"><input type="checkbox" id="f-sale"><span class="check__box">{{icon:check}}</span>On sale</label>
+        <label class="check"><input type="checkbox" id="f-stock"><span class="check__box">{{icon:check}}</span>Ready to ship (5+ in stock)</label>
+      </fieldset>
+      <button class="btn btn--ghost btn--block" type="button" id="reset-filters">{{icon:refresh-cw}}Reset all filters</button>
+    </aside>
+
+    <div>
+      <div class="toolbar">
+        <p class="toolbar__count" id="shop-count" aria-live="polite">Loading products…</p>
+        <div class="toolbar__right">
+          <button class="btn btn--sm btn--ghost filters-btn" type="button" data-open-filters aria-controls="filters">{{icon:sliders-horizontal}}Filters</button>
+          <label for="sort" class="sr-only">Sort products</label>
+          <select class="select" id="sort">
+            <option value="featured">Featured</option>
+            <option value="popular">Best selling</option>
+            <option value="newest">Newest</option>
+            <option value="rating">Top rated</option>
+            <option value="price-asc">Price: low to high</option>
+            <option value="price-desc">Price: high to low</option>
+          </select>
+          <div class="view-toggle" role="group" aria-label="Layout">
+            <button type="button" data-view="grid" aria-pressed="true" aria-label="Grid view">{{icon:layout-grid}}</button>
+            <button type="button" data-view="list" aria-pressed="false" aria-label="List view">{{icon:list}}</button>
+          </div>
+        </div>
+      </div>
+      <div class="active-filters" id="active-filters" aria-label="Active filters"></div>
+      <h2 class="sr-only">Products</h2>
+      <div class="product-grid product-grid--3" id="shop-grid" aria-live="polite" aria-busy="false"></div>
+      <div class="load-more" id="load-more-wrap" hidden>
+        <p class="load-more__info"></p>
+        <div class="load-more__bar"><span></span></div>
+        <button class="btn btn--ghost btn--outline-glow" type="button" id="load-more">Load more products</button>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,53 @@
+======================================================================
+  NEXORA — Commercial Website Template by TemplateFlux
+  Version 1.0.0
+======================================================================
+
+Thank you for purchasing NEXORA! Follow these quick steps to get started:
+
+1. OPEN THE DOCUMENTATION
+   -------------------------------------------------------------------
+   Before making changes, open documentation/index.html in any modern
+   web browser. It includes a complete reference guide for:
+   - File organization and naming conventions
+   - Customizing colors and design tokens in CSS
+   - Editing products, categories, coupons, and prices in JS
+   - Connecting your own backend, payment gateway, or form endpoints
+   - Deployment options (Vercel, Netlify, traditional cPanel/Apache/Nginx)
+
+2. PREVIEW THE WEBSITE LOCALLY
+   -------------------------------------------------------------------
+   To experience the template with all localStorage features active:
+   
+   Option A (Python 3):
+     Open your terminal, navigate to the template/ folder, and run:
+     python3 -m http.server 8080
+     Then visit http://localhost:8080 in your browser.
+
+   Option B (Node.js):
+     Inside the template/ folder, run:
+     npx serve .
+
+   Option C (VS Code):
+     Install the "Live Server" extension, open template/index.html,
+     and click "Go Live" in the bottom status bar.
+
+3. CUSTOMIZATION QUICK REFERENCE
+   -------------------------------------------------------------------
+   - Global Design Tokens: Open template/assets/css/style.css and
+     edit section "02. DESIGN TOKENS" at the top of the file.
+   - Products & Store Data: Open template/assets/js/data.js to update
+     product titles, prices, descriptions, and coupon codes.
+   - Images: Drop your images into template/assets/images/, keeping
+     the original dimensions and filenames, or update paths in HTML/JS.
+
+4. IMPORTANT NOTICE
+   -------------------------------------------------------------------
+   - Cart, wishlist, and checkout are client-side demonstrations.
+     Connect your backend payment provider before launching a live store.
+   - The preview photography shown in live demos is for display only.
+     High-resolution branded placeholders ship in this package.
+
+For support, visit our profile page on ThemeForest.
+Happy building!
+— TemplateFlux
