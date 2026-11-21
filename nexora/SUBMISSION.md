@@ -7,7 +7,7 @@
 | Theme Preview | `nexora-theme-preview.zip` | `01_nexora_preview.jpg` is 590×300 (inline preview). `02_`–`14_` are 1170 px wide JPGs, each ≤ 1500 px tall (see `preview-assets/README.md`) |
 | Cover image (only where the form offers a cover field) | `nexora-cover-2340x1560.jpg` | 3:2, 2340×1560 |
 | Main Files | `nexora-main-files-v1.0.0.zip` | `NEXORA/` → `template/`, `documentation/`, `CREDITS.txt`, `README.txt` |
-| Live preview | Host `site/` (with demo images) and enter the URL | — |
+| Live preview | https://nexora-templateflux.vercel.app | — |
 
 ## Required by Envato (verified against Envato author help articles)
 - [x] 80×80 thumbnail, and a 590×300 first preview image named `01_…` in the Theme Preview ZIP, with the rest numbered in display order.
