@@ -15,6 +15,9 @@ tmp_test_extract/
 /tmp/
 *.log
 
+# IDE & Assistant
+.kilo/
+
 # OS generated
 .DS_Store
 Thumbs.db
